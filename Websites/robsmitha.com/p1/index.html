@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Rob Smitha - CS Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../css/3-col-portfolio.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+    <link href="../css/custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id='WelcomeMessage' onclick="GenerateMsg()" class="navbar-brand">Click to talk</a>
+		  <script>
+		  
+		  function GenerateMsg(){
+		  num = Math.floor((Math.random() * 4) + 1)
+		  switch(num){  
+			case 1: WelcomeMsg = "Hello world!";
+			break;
+			case 2: WelcomeMsg = "How's it going?";
+			break;
+			case 3: WelcomeMsg = "You need a website?";
+			break;
+			case 4: WelcomeMsg = "I build websites";
+			break;
+		  }
+		  document.getElementById('WelcomeMessage').innerHTML = WelcomeMsg;
+		  }
+		  </script>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MyStuff<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+			  <li class="dropdown-header">CGS3066</li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="../p2/index.html">Form Validation</a></li>
+                <li><a href="../p2/mms/index.html">Mini-Mimesweep</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Other</li>
+                <li><a href="../Past_Projects/Budget_Tool/Budget_Tool.html">Budget Tool</a></li>
+                <li><a href="../Past_Projects/Tax_Calculator/Tax_Calculator.html">Tax Calculator</a></li>
+				<li><a href="../Past_Projects/Photo_Gallery/photos.htm">Photo Gallery</a></li>
+				<li><a href="../Past_Projects/Movie_Search/Movie_Search.html">Movie Search</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+   
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="page-header">Robert Smitha<br>
+                    <small>Computer Science, FSU</small>
+					<ul class="list-inline">
+  				<li>
+  					<a href="https://www.linkedin.com/in/rob-smitha-7ab39212a"  target="_blank">
+  					<i class="fa fa-linkedin" aria-hidden="true"></i>
+  					</a>
+  				</li>
+  				<li>
+  					<a href="https://github.com/RobertSmitha"  target="_blank">
+  					<i class="fa fa-github-alt" aria-hidden="true"></i>
+  					</a>
+  				</li>
+  				<li>
+  					<a href="https://www.facebook.com/rob.smitha"  target="_blank">
+  					<i class="fa fa-facebook" aria-hidden="true"></i>
+  					</a>
+  				</li>
+  				<li>
+  					<a href="https://twitter.com/WebMediaConcept" target="_blank" >
+  					<i class="fa fa-twitter" aria-hidden="true"></i>
+  					</a>
+  				</li>
+  				<li>
+  					<a href="https://www.instagram.com/WebMediaConcepts/"  target="_blank">
+  					<i class="fa fa-instagram" aria-hidden="true"></i>
+  					</a>
+  				</li>
+  				<li>
+  					<a href="https://plus.google.com/u/0/104625845534875230413" target="_blank" >
+  					<i class="fa fa-google-plus" aria-hidden="true"></i>
+  					</a>
+  				</li>
+				<li>
+  					<a href="mailto:rws15@my.fsu.edu" >
+  					<i class="fa fa-envelope-o" aria-hidden="true"></i>
+  					</a>
+  				</li>
+			</ul>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+		<div class="container">
+		  <div class="row">
+				<div class="col-md-6">
+					<h3>Overview</h3>
+					<p>Senior at Florida State University pursuing a Bachelor’s of Arts in Computer Science. Web professional capable of managing a company's online presence and implementing systematic online marketing techniques. </p>
+					<ul>
+					<h4>Skills</h4>
+					<li>Web Design</li>
+					<li>Programming</li>
+					<li>Search Engine Optimization (SEO)</li>
+					<li>Web Application Development</li> 
+					<li>User Interface Design</li>
+					<li>WordPress Development</li>
+					<li>Project Management</li>
+					<h4>Languages</h4>
+					<li>C++</li>
+					<li>HTML5</li>
+					<li>CSS3</li> 
+					<li>Javascript</li> 
+					<li>JSON</li> 
+					<li>jQuery</li>
+					<ul>
+				</div>
+				<div class="col-md-6">
+  				<h3>Web Design Portfolio</h3>	
+					<table>
+						  <tr>
+   						 <th>Project Name</th>
+   						 <th>Website Type</th>
+ 						 </tr>
+ 						 <tr>
+  					  <td><a href="http://victoriazepp.com/">Clarity1st Consulting</a></td> 
+					  <td>WordPress Website</td>
+ 						 </tr>
+ 						 <tr>
+  						  <td><a href="http://pfeifferlawgroup.com/">Pfeiffer Law Group</a></td>
+   					  <td>WordPress Website</td> 
+					  </tr>
+					  <tr>
+  						  <td><a href="http://cory2v.com/">Van Valin Magic</a></td>
+   					  <td>Bootstrap Website</td> 
+					  </tr>
+					  <tr>
+  						  <td><a href="http://frazeframe.com/">Frazeframe</a></td>
+   					  <td>Bootstrap Website</td> 
+					  </tr>
+					</table>
+					<br>
+					<br>
+					<button type="button" class="btn btn-default center-block"><a class="blue" href="../docs/resume.pdf" target="_blank">Download Resume</a></button>
+
+				</div>
+			</div>
+		</div>
+        
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><a href="../index.html">Go Home</a> &middot; Copyright &copy; Rob Smitha 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

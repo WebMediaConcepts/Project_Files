@@ -1,0 +1,94 @@
+/*nav bar*/
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+	 font-family: 'Cinzel', serif;
+}
+.navbar-custom .navbar-toggle {
+    color: #fff;
+    background-color: #247BFF;
+    font-size: 12px;
+}
+
+.navbar-custom .nav li.active a {
+    background-color: #247BFF;
+}
+/*intro page top*/
+.intro .intro-body .brand-heading {
+    font-size: 75px;
+	 font-family: 'Contrail One', cursive;
+	 text-shadow: 2px 2px #000;
+}
+.btn-circle:hover {
+	background-color: #247BFF;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+}
+a {
+	color: #247BFF;
+}
+a:hover {
+	color: #fff;
+}
+a:focus {
+	color: #fff;
+}
+/*ABOUT*/
+
+/*SERVICES*/
+h4 {
+	margin-bottom: 5px;
+}
+.panel-default>.panel-heading {
+    color: #fff;
+    background-color:#247BFF;
+    border-color: #000;
+	text-shadow: 2px 2px #000;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    background-color: #000;
+}
+ul {
+	list-style-type:none;
+}
+/*MEDIA*/
+/*SOCIAL BUTTONS*/
+.btn-default {
+    border: 1px solid #247BFF;
+    color: #247BFF;
+    background-color: transparent;
+}
+.btn-default:hover {
+    border: 1px solid #247BFF;
+    color: #000;
+    background-color: #247BFF;
+}
+#lightbox .modal-content {
+    display: inline-block;
+    text-align: center;   
+}
+
+#lightbox .close {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+    padding: 5px 8px;
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -15px;
+    right: -55px;
+    
+    z-index:1032;
+}
+/*button in contact*/
+.btn-success {
+    color: #fff;
+    background-color: #247BFF;
+    border-color: #247BFF;
+}
+
+.blue {
+	color: #247BFF;
+}

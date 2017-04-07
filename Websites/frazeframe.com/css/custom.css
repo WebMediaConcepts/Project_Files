@@ -1,0 +1,58 @@
+/*
+blue == #337ab7;
+
+*/
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+/*CUSTOM STYLING CLASSES*/
+.padding-top{
+	padding-top: 70px;
+}
+.gray {
+	color: 333;
+}
+.white {
+	color: #f3f3f3;
+}
+.blue-button {
+	background-color: #337ab7;
+	color: white;
+}
+/***************************NAV BAR************************/
+.navbar-default {
+    background-color: #eee;
+    border-color: #eee;
+
+}
+.container>.navbar-header {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-bottom: 40px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+    font-size: 20px;
+    margin: 15px;
+}
+/*************************HOME PAGE*************************/
+.intro-header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #333;
+    background: #fff;
+    background-size: cover;
+}
+.content-section-a {
+    padding: 50px 0;
+    background-color: #337ab7;
+}
+/*************************FAQ PAGE*************************/
+/*************************Contact PAGE*************************/
+.btn-success {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}

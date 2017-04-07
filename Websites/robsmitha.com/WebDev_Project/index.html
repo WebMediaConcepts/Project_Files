@@ -1,0 +1,387 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Smitha Consulting</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://use.fontawesome.com/d4f311c4ca.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Smitha Consulting</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Log In</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#ModalRegister">Register</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron">
+            <h1 class="text-center textResizer">Let's Make Moves</h1>
+            <hr />
+            <form id="contact-form" method="post" action="#" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_name">User Name</label>
+                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your user name">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_lastname">Password</label>
+                                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your password">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 center-block">
+                            <div class="btn btn-group pull-right">
+                                <button class="btn btn-danger">Log In</button>
+                                <!--<input type="submit" class="btn btn-danger btn-send pull-right" value="Log In">-->
+                                <!-- Trigger the modal with a button -->
+                                <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </header>
+
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Areas of Advising</h2>
+                <hr />
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center">
+                <button class="btn btn-default service-icon" data-toggle="modal" data-target="#ModalLife">
+                    <i class="fa fa-user fa-2x red"></i>
+                    <h3>Life</h3>
+                </button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalWeb">
+                <button class="btn btn-default service-icon">
+                    <i class="fa fa-laptop fa-2x red"></i>
+                    <h3>Web</h3>
+                </button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalBusiness">
+                <button class="btn btn-default service-icon">
+                    <i class="fa fa-briefcase fa-2x red"></i>
+                    <h3>Business</h3>
+                </button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalMarket">
+                <button class="btn btn-default service-icon">
+                    <i class="fa fa-bar-chart fa-2x red"></i><br />
+                    <h3>Market</h3>
+                </button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalData">
+                <button class="btn btn-default service-icon">
+                    <i class="fa fa-database fa-2x red"></i><br />
+                    <h3>Data</h3>
+                </button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalResearch">
+                <button class="btn btn-default service-icon">
+                    <i class="fa fa-pencil fa-2x red"></i><br />
+                    <h3>Research</h3>
+                </button>
+            </div>
+        </div>
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Smitha Consulting 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+    <!-- ModalRegister -->
+    <div id="ModalRegister" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="contact-form" method="post" action="contact/contact.php" role="form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Name</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your  name">
+                                        <div class="help-block with-errors"></div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Email</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter a valid email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">User Name</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your user name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Password</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your password">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-danger btn-send" value="Log In">
+                                    <a class="btn btn-default" href="contact.html">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ModalLife -->
+    <div id="ModalLife" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Talk to a life consultant.</h3>
+                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ModalWeb -->
+    <div id="ModalWeb" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Talk to a web consultant.</h3>
+                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ModalBusiness -->
+    <div id="ModalBusiness" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Talk to a business consultant.</h3>
+                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ModalMarket -->
+    <div id="ModalMarket" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Talk to a market consultant.</h3>
+                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ModalData -->
+    <div id="ModalData" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Talk to a data consultant.</h3>
+                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ModalResearch -->
+    <div id="ModalResearch" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Talk to a research consultant.</h3>
+                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

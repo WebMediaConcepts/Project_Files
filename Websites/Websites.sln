@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "smithaconsulting.com", "..\..\..\..\Desktop\OneDrive\RepoWebsites\smithaconsulting.com\", "{00B065F9-C519-48C2-B0B3-F7210D31DA43}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58867"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\smithaconsulting.com\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58867\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58867"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\smithaconsulting.com\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58867\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58867"
+		SlnRelativePath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\smithaconsulting.com\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "robsmitha.com", "..\..\..\..\Desktop\OneDrive\RepoWebsites\robsmitha.com\", "{17A59323-3E50-4E00-A58F-1DDEBB352119}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58874"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\robsmitha.com\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58874\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58874"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\robsmitha.com\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58874\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58874"
+		SlnRelativePath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\robsmitha.com\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "frazeframe.com", "..\..\..\..\Desktop\OneDrive\RepoWebsites\frazeframe.com\", "{2A90E2D8-C6C1-4D4B-8A9A-976BC4088C1B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58875"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\frazeframe.com\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58875\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58875"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\frazeframe.com\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58875\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58875"
+		SlnRelativePath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\frazeframe.com\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "cory2v.com", "..\..\..\..\Desktop\OneDrive\RepoWebsites\cory2v.com\", "{CE3A249D-5AA7-4227-8E8B-DCB125656138}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58876"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\cory2v.com\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58876\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58876"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\cory2v.com\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58876\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58876"
+		SlnRelativePath = "..\..\..\..\Desktop\OneDrive\RepoWebsites\cory2v.com\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00B065F9-C519-48C2-B0B3-F7210D31DA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B065F9-C519-48C2-B0B3-F7210D31DA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A59323-3E50-4E00-A58F-1DDEBB352119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A59323-3E50-4E00-A58F-1DDEBB352119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A90E2D8-C6C1-4D4B-8A9A-976BC4088C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A90E2D8-C6C1-4D4B-8A9A-976BC4088C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3A249D-5AA7-4227-8E8B-DCB125656138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3A249D-5AA7-4227-8E8B-DCB125656138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
