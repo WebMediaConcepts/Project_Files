@@ -1,10 +1,5 @@
 <?php
-include 'mysql_info.php';
-// Connecting, selecting database
-$link = mysql_connect($hostname, $username, $password)
-    or die('Could not connect: ' . mysql_error());
-echo 'Connected successfully';
-mysql_select_db($my_db) or die('Could not select database');
+
 
 // error reporting
 error_reporting(E_ALL);
@@ -15,29 +10,46 @@ ini_set('display_errors',1);
 		$data = htmlspecialchars($data);
 		return $data;
 	}
-	$nameErr = $emailErr = $genderErr = $websiteErr = "";
-	$name = $email= $gender = $comment = $website = "";
+	$firstnameErr = $lastnameErr = $emailErr = $usernameErr = $passwordErr = "";
+	$firstname = $lastname = $email = $username = $pw = "";
 
-// validation steps here
-	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		$name = $_POST['name'];
+// validation steps here	
+	if($_SERVER["REQUEST_METHOD"] == "POST")
+	{	// Store user input in vars
+		$firstname = $_POST['firstname'];
+		$lastname = $_POST['lastname'];
 		$email = $_POST['email'];
-		$website = $_POST['website'];
-		$comment = $_POST['comment'];
-		$gender = $_POST['gender'];
-		if(empty($name))
+		$username = $_POST['username'];
+		$pw = $_POST['password'];
+		// Test firstname input
+		if(empty($firstname))
 		{
-			$nameErr = "Empty name";
+			$firstnameErr = "Empty name";
 		}
 		else
 		{
-			$name = test_input($name);
-			if (!preg_match("/^[a-zA-Z]*$/",$name))
+			$firstname = test_input($firstname);
+			if (!preg_match("/^[a-zA-Z]*$/",$firstname))
 			{
-				$nameErr = "Only letter and white space are accepted";
+				$firstnameErr = "Only letter and white space are accepted";
 			}
 		
 		}
+		// Test lastname input
+		if(empty($lastname))
+		{
+			$lastnameErr = "Empty name";
+		}
+		else
+		{
+			$lastname = test_input($lastname);
+			if (!preg_match("/^[a-zA-Z]*$/",$lastname))
+			{
+				$lastnameErr = "Only letter and white space are accepted";
+			}
+		
+		}
+		// Test email input
 		if(empty($email))
 		{
 			$emailErr = "Empty email";
@@ -49,15 +61,14 @@ ini_set('display_errors',1);
 				$emailErr = "Invalid email format";
 			}*/
 		}
-		$website = test_input($website);
-		$comment = test_input($comment);
-		$gender = test_input($gender);
-		if(($nameErr == $emailErr) && ($genderErr == $websiteErr))
+		$pw = test_input($pw);
+		$username = test_input($username);
+		if(($firstnameErr == $lastnameErr) && ($emailErr == $usernameErr))
 		{
 			include 'mysql_info.php';
 			$link = mysql_connect($hostname, $username, $password) or die('Could not connect:'.mysql_error());
 			mysql_select_db($my_db) or die('Could not select db');
-			$query = 'INSERT INTO ACCOUNTS (ID, UserName, FirstName, LastName, Password) VALUES ("'.$name.'", "'.$email.'", "'.$website.'", "'.$comment.'", "'.$gender.'")'; 
+			$query = "INSERT INTO UserInfo (firstname, lastname, email, username, password) VALUES ("'.$firstname.'", "'.$lastname.'", "'.$email.'", "'.$username.'", "'.$pw.'")"; 
 			$result = mysql_query($query) or die ('Query Failed:'. mysql_error());
 			mysql_close($link);
 		}
@@ -66,13 +77,6 @@ ini_set('display_errors',1);
 	{
 		echo "No submit";
 	}
-
-
-// Performing SQL query
-$query = "INSERT INTO ACCOUNTS VALUES ('2', 'alex', 'Alexander', 'Leader', 'leaderalexanderj@gmail.com')";
-$result = mysql_query($query) or die('Query failed: ' . mysql_error());
-
-
 
 // Free resultset
 mysql_free_result($result);
