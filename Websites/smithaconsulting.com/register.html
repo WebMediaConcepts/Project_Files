@@ -76,24 +76,27 @@
             <hr />
         <!-- /.row -->
 	    <div class="col-lg-12">
-            <form class="form-group" method="post" action="php/php_msql.php">
+            <form name="myForm" class="form-group" method="post" onsubmit="return validate();" action="php/php_msql.php">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="firstname">First Name</label>
-                            <input type="text" class="form-control" name="firstname" placeholder="Enter Your First Name" />
+                            <input id="fname" type="text" class="form-control" name="firstname" placeholder="Enter Your First Name" />
+                            <span id="fname_err"></span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="lastname">Last Name</label>
                             <input type="text" class="form-control" name="lastname" placeholder="Enter Your Last Name" />
+                            <span id="lname_err"></span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address" />
+                            <span id="em_err"></span>
                         </div>
                     </div>
                 </div>
@@ -102,12 +105,14 @@
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input type="text" class="form-control" name="username" placeholder="Enter A Username" />
+                            <span id="uname_err"></span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="text" class="form-control" name="password" placeholder="Enter A Password" />
+                            <span id="pw_err"></span>
                         </div>
                     </div>
                     <div class="col-md-4 clearfix">
@@ -142,6 +147,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="contact/validator.js"></script>
     <script src="contact/contact.js"></script>
+    <script src="js/validate.js"></script>
 
 </body>
 
