@@ -66,33 +66,30 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron">
-            <h1 class="text-center textResizer">Let's Make Moves</h1>
+            <h1 class="text-center textResizer">Log In To Your Account</h1>
             <hr />
             <form class="form-inline">
-			<div class="row">
-				<div class="col-md-4">
-				  <div class="form-group">
-					<label class="sr-only" for="exampleInputEmail3">Email address</label>
-					<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-				  </div>
-				</div>
-				<div class="col-md-4">
-				  <div class="form-group">
-					<label class="sr-only" for="exampleInputPassword3">Password</label>
-					<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-				  </div>
-				</div>
-				<div class="col-md-2">
-                        <ul class="list-inline">
-                            <li>
-                                <button type="submit" class="btn btn-default">Sign in</button>
-                            </li>
-                            <!--<li>
-                                <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
-                            </li>-->
-                        </ul>                    
-				</div>
-			</div>		
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="Enter A Username" />
+                            <span id="uname_err"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="password" placeholder="Enter A Password" />
+                            <span id="pw_err"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 clearfix">
+                        <div class="pull-left ">
+                            <br />
+                            <button type="submit" class="btn-lg btn-danger">Log In</button>
+                        </div>
+                    </div>
+
+                </div>		
 			</form>
 
         </header>
