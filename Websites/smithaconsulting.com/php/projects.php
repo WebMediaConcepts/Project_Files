@@ -6,8 +6,8 @@
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{	// Store user input in vars
 		$projectName = $_POST['ProjectName'];
-		$description = $_POST['Category'];
-		$category = $_POST['Description'];
+		$category = $_POST['Category'];
+		$description = $_POST['Description'];
 	}
 	if($projectName != "" || $description !== "")
 	{
@@ -22,7 +22,7 @@
 
 
 			// Performing SQL query
-			$query = 'INSERT INTO Projects VALUES ("'.$projectName.'", "'.$description.'", "'.$category.'")'; 
+			$query = 'INSERT INTO Projects VALUES ("'.$projectName.'", "'.$category.'", "'.$description.'")'; 
 			$result = mysql_query($query) or die ('Query Failed:'. mysql_error());
 			/******************END QUERY***************************************/
 			header("location:http://ww2.cs.fsu.edu/~smitha/WebDev_Project/");
