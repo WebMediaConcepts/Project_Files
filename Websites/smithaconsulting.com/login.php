@@ -79,7 +79,7 @@ if ($_SESSION['user_id']=='')
     </nav>
 <div class="container">
 		<div class="col-md-12">
-		<a href="index.html">Go Back</a>
+		<br />
     <form action="" method="post" id="frmLogin">
         <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
         <div class="field-group">

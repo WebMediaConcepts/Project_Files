@@ -1,9 +1,10 @@
 #frmLogin {
     padding: 20px 60px;
-    background: #B6E0FF;
-    color: #555;
-    display: inline-block;
+    background: #d3d3d3;
+    color: #000;
+    display: block;
     border-radius: 4px;
+    text-align:center;
 }
 
 .field-group {
@@ -12,13 +13,13 @@
 
 .input-field {
     padding: 8px;
-    width: 200px;
+    width: 500px;
     border: #A3C3E7 1px solid;
     border-radius: 4px;
 }
 
 .form-submit-button {
-    background: #65C370;
+    background: #d9534f;
     border: 0;
     padding: 8px 20px;
     border-radius: 4px;
@@ -28,7 +29,7 @@
 
 .member-dashboard {
     padding: 40px;
-    background: #D2EDD5;
+    background: #d3d3d3;
     color: #555;
     border-radius: 4px;
     display: inline-block;
