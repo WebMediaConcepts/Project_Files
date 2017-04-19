@@ -63,7 +63,7 @@ if ($_SESSION['user_id']=='')
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html">Team</a>
                     </li>                   
                     <li>
                         <a href="register.html">Register</a>
