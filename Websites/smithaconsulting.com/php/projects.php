@@ -1,14 +1,15 @@
 <?php
 
-	$un = $pw = "";
+	$projectName = $description = $category = "";
 
 // validation steps here	
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{	// Store user input in vars
-		$un = $_POST['username'];
-		$pw = $_POST['password'];
+		$projectName = $_POST['ProjectName'];
+		$description = $_POST['Category'];
+		$category = $_POST['Description'];
 	}
-	if($un != "" || $pw == "")
+	if($projectName != "" || $description !== "")
 	{
 	/************************END ERROR REPORTING*****************************/
 			include 'mysql_info.php';
@@ -21,7 +22,7 @@
 
 
 			// Performing SQL query
-			$query = 'INSERT INTO Users VALUES ("'.$firstname.'", "'.$lastname.'", "'.$email.'", "'.$un.'", "'.$pw.'")'; 
+			$query = 'INSERT INTO Projects VALUES ("'.$projectName.'", "'.$description.'", "'.$category.'")'; 
 			$result = mysql_query($query) or die ('Query Failed:'. mysql_error());
 			/******************END QUERY***************************************/
 			header("location:http://ww2.cs.fsu.edu/~smitha/WebDev_Project/");
