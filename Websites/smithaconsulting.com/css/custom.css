@@ -61,3 +61,31 @@ textarea {
 .red {
     color: #d9534f;
 }
+
+/*FRONT PAGE TEMPLATE STYLE*/
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+}

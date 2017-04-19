@@ -50,12 +50,12 @@
                     </li>
                     <li>
                         <a href="about.html">About</a>
+                    </li>                   
+                    <li>
+                        <a href="register.html">Register</a>
                     </li>
                     <li>
                         <a href="login.php">Log In</a>
-                    </li>
-                    <li>
-                        <a href="register.html">Register</a>
                     </li>
                 </ul>
             </div>
@@ -64,89 +64,116 @@
         <!-- /.container -->
     </nav>
 
+    <!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-casual.css file. -->
+    <header class="business-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">Log In To Your Account</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Jumbotron Header -->
-        <header class="jumbotron">
-            <h1 class="text-center textResizer">Log In To Your Account</h1>
-            <hr />
-            <form class="form-inline">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="username" placeholder="Enter A Username" />
-                            <span id="uname_err"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="password" placeholder="Enter A Password" />
-                            <span id="pw_err"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 clearfix">
-                        <div class="pull-left ">
-                            <br />
-                            <button type="submit" class="btn-lg btn-danger">Log In</button>
-                        </div>
-                    </div>
+        <hr>
 
-                </div>		
-			</form>
-
-        </header>
-
-
-        <!-- Title -->
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Areas of Advising</h2>
-                <hr />
+            <div class="col-sm-8">
+                <h2>Our Mission</h2>
+                <p>Smitha Consulting is leading the digital industry in bridging the communication gap between clients and developers, and like all good leaders, our aim is to serve. Our mission is to connect the dots for anyone in need of guidance. </p>
+                <p>From wordpress troubleshooting, to service requests for current and future clients. We are seeking to serve as a launching pad for those that are bound for success.</p>
+                <p>
+                    <a class="btn btn-danger btn-lg" href="login.php">Log In &raquo;</a>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h2>Don't Have An Account?</h2>
+                <address>
+                    <strong>Register Now!</strong>
+                </address>
+                <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
             </div>
         </div>
         <!-- /.row -->
 
-        <div class="row">
+        <hr>
 
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center">
-                <button class="btn btn-default service-icon" data-toggle="modal" data-target="#ModalLife">
-                    <i class="fa fa-user fa-2x red"></i>
-                    <h3>Life</h3>
-                </button>
+        <div class="row">
+            <div class="text-center">
+                <h3>Success Stories</h3>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalWeb">
-                <button class="btn btn-default service-icon">
-                    <i class="fa fa-laptop fa-2x red"></i>
-                    <h3>Web</h3>
-                </button>
+            <div class="col-sm-4">
+                <div class="hidden-sm hidden-xs">
+                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal1"><img class="img-responsive img-center" src="img/massini.png" alt=""></button>
+                </div>
+                <div class="hidden-md hidden-lg">
+                    <a href="http://www.massinilawnservices.com/"><img class="img-responsive img-center" src="img/massini.png" alt=""></a>
+                </div>                          
+                    <h2>Massini Lawn Services</h2>
+                <address>
+                    <strong>Team Members:</strong>
+                    <ul>
+                        <li>
+                            <i>Alex Leader</i>
+                        </li>
+                        <li>
+                            <i>Rob Smitha</i>
+                        </li>
+                    </ul>       
+                </address>                
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalBusiness">
-                <button class="btn btn-default service-icon">
-                    <i class="fa fa-briefcase fa-2x red"></i>
-                    <h3>Business</h3>
-                </button>
+            <div class="col-sm-4">
+                <div class="hidden-sm hidden-xs">
+                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal2"><img class="img-responsive img-center" src="img/tallyvisuals.png" alt=""></button>
+                </div>
+                <div class="hidden-md hidden-lg">
+                    <a href="http://tallyvisuals.com/"><img class="img-responsive img-center" src="img/tallyvisuals.png" alt=""></a>
+                </div>
+                <h2>Tally Visuals</h2>
+                <address>
+                    <strong>Team Members:</strong>
+                    <ul>
+                        <li>
+                            <i>Spencer Perez</i>
+                        </li>
+                        <li>
+                            <i>Jesse Baxer</i>
+                        </li>
+                        <li>
+                            <i>Rob Smitha</i>
+                        </li>
+                    </ul>
+                </address>  
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalMarket">
-                <button class="btn btn-default service-icon">
-                    <i class="fa fa-bar-chart fa-2x red"></i><br />
-                    <h3>Market</h3>
-                </button>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalData">
-                <button class="btn btn-default service-icon">
-                    <i class="fa fa-database fa-2x red"></i><br />
-                    <h3>Data</h3>
-                </button>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 text-center" data-toggle="modal" data-target="#ModalResearch">
-                <button class="btn btn-default service-icon">
-                    <i class="fa fa-pencil fa-2x red"></i><br />
-                    <h3>Research</h3>
-                </button>
+            <div class="col-sm-4">
+                <div class="hidden-sm hidden-xs">
+                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal3"><img class="img-responsive img-center" src="img/pfeifferlaw.png" alt=""></button>
+                </div>
+                <div class="hidden-md hidden-lg">
+                    <a href="http://pfeifferlawgroup.com/"><img class="img-responsive img-center" src="img/pfeifferlaw.png" alt=""></a>
+                </div>
+                <h2>Pfeiffer Law Group</h2>
+                <address>
+                    <strong>Team Members:</strong>
+                    <ul>
+                        <li>
+                            <i>Oleg Novoselskyy</i>
+                        </li>
+                        <li>
+                            <i>Rob Smitha</i>
+                        </li>
+                    </ul>
+                </address>  
             </div>
         </div>
+        <!-- /.row -->
+
         <hr>
+
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -163,7 +190,20 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+    <script>
+        hover = function () {
+            if (!document.body.currentStyle) return;
+            var DIVcomments = document.getElementById('comments');
+            var DIVcomment_wrap = document.getElementById('comment-wrap');
+            DIVcomments.onmouseover = function () {
+                DIVcomment_wrap.style.display = 'block';
+            }
+            DIVcomments.onmouseout = function () {
+                DIVcomment_wrap.style.display = 'none';
+            }
+        }
+        window.onload = hover;
+    </script>
 
 
     <!-- ModalRegister -->
@@ -233,19 +273,21 @@
 
         </div>
     </div>
-    <!-- ModalLife -->
-    <div id="ModalLife" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    <!-- Massini Modal-->
+    <div id="Modal1" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">Massini Lawn Services</h4>
                 </div>
                 <div class="modal-body">
-                    <h3>Talk to a life consultant.</h3>
+                    <iframe src="http://www.massinilawnservices.com/"></iframe>
+                    <br />
                     <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                    <a href="http://www.massinilawnservices.com/" class="btn btn-default">Visit Site</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -254,19 +296,21 @@
 
         </div>
     </div>
-    <!-- ModalWeb -->
-    <div id="ModalWeb" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    <!-- TallyVisuals Modal -->
+    <div id="Modal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">Tally Visuals</h4>
                 </div>
                 <div class="modal-body">
-                    <h3>Talk to a web consultant.</h3>
+                    <iframe src="http://tallyvisuals.com/"></iframe>
+                    <br />
                     <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                    <a href="http://tallyvisuals.com/" class="btn btn-default">Visit Site</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -275,19 +319,21 @@
 
         </div>
     </div>
-    <!-- ModalBusiness -->
-    <div id="ModalBusiness" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    <!-- Pfeiffer Law Modal -->
+    <div id="Modal3" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">Pfeiffer Law Group</h4>
                 </div>
                 <div class="modal-body">
-                    <h3>Talk to a business consultant.</h3>
+                    <iframe src="http://pfeifferlawgroup.com/"></iframe>
+                    <br />
                     <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+                    <a href="http://pfeifferlawgroup.com/" class="btn btn-default">Visit Site</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -296,69 +342,7 @@
 
         </div>
     </div>
-    <!-- ModalMarket -->
-    <div id="ModalMarket" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <h3>Talk to a market consultant.</h3>
-                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- ModalData -->
-    <div id="ModalData" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <h3>Talk to a data consultant.</h3>
-                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- ModalResearch -->
-    <div id="ModalResearch" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <h3>Talk to a research consultant.</h3>
-                    <button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    
 </body>
 
 </html>

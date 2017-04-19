@@ -43,7 +43,9 @@ if ($_SESSION['user_id']=='')
     <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-<a href="index.html">Go Back</a>
+<div class="container">
+		<div class="col-md-12">
+		<a href="index.html">Go Back</a>
     <form action="" method="post" id="frmLogin">
         <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
         <div class="field-group">
@@ -58,6 +60,8 @@ if ($_SESSION['user_id']=='')
             <div><input type="submit" name="login" value="Login" class="form-submit-button"></div>
         </div>
     </form>
+		</div>
+</div>
 </body>
 </html>
 <?php
@@ -81,20 +85,17 @@ else
 				<h3>Welcome <?php echo $_SESSION['user_id']; ?>, You have successfully logged in!</h3>
 				<hr />
 				<p class="lead">What's going on?</p>
-		<form id="ProjectForm" class="form-group" method="post" action="php/project.php">
+		<form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
+
 				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name">
 				<br />
-					<label class="radio-inline">
-					  <input name="ServiceRequest" type="radio" name="inlineRadioOptions" id="inlineRadioServiceRequest" value="service_request"> Service Request
-					</label>
-					<label class="radio-inline">
-					  <input name="WordPressHelp" type="radio" name="inlineRadioOptions" id="inlineRadioWordPressHelp" value="wordpress_help"> WordPress Help
-					</label>
-					<br />
-					<br />
-					<textarea name="Description" class="form-control" rows="3" placeholder="Describe the issue"></textarea>
+				<input name="Category" type="text" class="form-control" placeholder="Service Request or WordPress Help">
 				<br />
 				<br />
+				<textarea name="Description" class="form-control" rows="3" placeholder="Describe the issue"></textarea>
+				<br />
+				<br />
+				<input type="submit" name="submitProject">
 		</form>
 		<form action="" method="post" id="frmLogout">
 			<input type="submit" name="logout" value="Logout" class="logout-button">
