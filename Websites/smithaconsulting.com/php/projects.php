@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 	$projectName = $description = $category = "";
 
 // validation steps here	
@@ -22,10 +22,10 @@
 
 
 			// Performing SQL query
-			$query = 'INSERT INTO Projects VALUES ("'.$projectName.'", "'.$category.'", "'.$description.'")'; 
+			$query = 'INSERT INTO Projects VALUES ("'.$_SESSION['user_id'].'", "'.$projectName.'", "'.$category.'", "'.$description.'")'; 
 			$result = mysql_query($query) or die ('Query Failed:'. mysql_error());
 			/******************END QUERY***************************************/
-			header("location:http://ww2.cs.fsu.edu/~smitha/WebDev_Project/");
+			header("location:http://ww2.cs.fsu.edu/~smitha/WebDev_Project/myProjects.php");
 
 			// Free resultset
 			mysql_free_result($result);
