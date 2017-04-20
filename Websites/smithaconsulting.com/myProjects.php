@@ -65,11 +65,16 @@
 
     <!-- Page Content -->
     <div class="container">
+	
         <!-- Title -->
             <h1 class="text-center textResizer">Here Are Your Projects</h1>
-            <hr />
+            <a href="login.php" class="btn btn-default">My Account</a>
+			<a href="CreateTask.php" class="btn btn-danger">Create New Task</a>
+			<hr />
         <!-- /.row -->
+		
 	    <div class="col-lg-12">
+		
             <?php
 session_start();
 include 'php/mysql_info.php';
@@ -79,31 +84,21 @@ $link = mysql_connect($hostname, $username, $password)
 mysql_select_db($my_db) or die('Could not select database');
 $User = $_SESSION['user_id'];
 // Performing SQL query
-$query = "SELECT projectName FROM Projects WHERE Username = '".$User."'";
+$query = "SELECT projectName, description FROM Projects WHERE Username = '".$User."'";
 $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
 // Printing results in HTML
 echo "<h3>";
 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-	echo "Project: ";
+	echo "Project:    ";
     foreach ($line as $col_value) {
-        echo "\t\t<i>$col_value</i>\n";
+        echo "\t\t<i>$col_value</i><br><br>";
     }
+	
+	echo "<br>";
+	
 }
-echo "</h3>";
-// get description
-$query = "SELECT description FROM Projects WHERE Username = '".$User."'";
-$result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
-// Printing results in HTML
-echo "<h3>";
-while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-	echo "Details: ";
-    foreach ($line as $col_value) {
-        echo "\t\t<i>$col_value</i>\n";
-    }
-}
-echo "</h3>";
 
 // Free resultset
 mysql_free_result($result);
@@ -111,7 +106,11 @@ mysql_free_result($result);
 // Closing connection
 mysql_close($link);
 ?>
-
+	<p>Delete a project</p>
+		<form id="DeleteProjectForm" class="form-group" method="post" action="php/DeleteProject.php">
+				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name To Delete">
+				<input type="submit" name="DeleteProject">
+		</form>
 
 
         </div>

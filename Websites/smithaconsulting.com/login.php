@@ -106,8 +106,18 @@ else
 		<div class="col-md-12">
 				<h3>Welcome <?php echo $_SESSION['user_id']; ?>, You have successfully logged in!</h3>
 				<hr />
-				<a class="btn btn-danger" href="myProjects.php">My Projects</a>
-				<a class="btn btn-primary" href="CreateTask.php">Create Task</a>
+				<div class="row">
+				  <div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+					  <img src="img/bg.png" alt="Dashboard">
+					  <div class="caption">
+						<h3>Here's where you start</h3>
+						<p>Create a task or view tasks you've already created.</p>
+						<p><a href="CreateTask.php" class="btn btn-danger" role="button">Create Task</a> <a href="myProjects.php" class="btn btn-default" role="button">My Projects</a></p>
+					  </div>
+					</div>
+				  </div>
+				</div>
 		<form action="" method="post" id="frmLogout">
 			<input type="submit" name="logout" value="Logout" class="logout-button">
 		</form>

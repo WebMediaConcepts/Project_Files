@@ -65,10 +65,14 @@
 
     <!-- Page Content -->
     <div class="container">
+	
         <!-- Title -->
             <h1 class="text-center textResizer">Create A Task</h1>
+			<a href="login.php" class="btn btn-default">My Account</a>
+			<a href="login.php" class="btn btn-danger">My Projects</a>
             <hr />
         <!-- /.row -->
+		
 	    <div class="col-lg-12">
             <p class="lead">What's going on?</p>
 		<form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
