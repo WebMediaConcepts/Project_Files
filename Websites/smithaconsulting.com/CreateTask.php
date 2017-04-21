@@ -76,12 +76,13 @@
 	    <div class="col-lg-12">
             <p class="lead">What's going on?</p>
 		<form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
-
+				<label for="ProjectName">Project Name</label>
 				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name">
 				<br />
+				<label for="Category">Category</label>
 				<input name="Category" type="text" class="form-control" placeholder="Service Request or WordPress Help">
 				<br />
-				<br />
+				<label for="Description">Description</label>
 				<textarea name="Description" class="form-control" rows="3" placeholder="Describe the issue"></textarea>
 				<br />
 				<br />

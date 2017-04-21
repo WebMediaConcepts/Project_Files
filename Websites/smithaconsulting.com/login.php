@@ -107,13 +107,23 @@ else
 				<h3>Welcome <?php echo $_SESSION['user_id']; ?>, You have successfully logged in!</h3>
 				<hr />
 				<div class="row">
-				  <div class="col-sm-6 col-md-4">
+				  <div class="col-lg-6">
+					<div class="thumbnail">
+					  <img src="img/bg2.png" alt="Dashboard">
+					  <div class="caption text-center">
+						<h1>Start A New Project</h1>
+						<br>
+						<p><a href="CreateTask.php" class="btn-lg btn-danger" role="button">Create Task</a></p>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-lg-6">
 					<div class="thumbnail">
 					  <img src="img/bg.png" alt="Dashboard">
-					  <div class="caption">
-						<h3>Here's where you start</h3>
-						<p>Create a task or view tasks you've already created.</p>
-						<p><a href="CreateTask.php" class="btn btn-danger" role="button">Create Task</a> <a href="myProjects.php" class="btn btn-default" role="button">My Projects</a></p>
+					  <div class="caption text-center">
+						<h1>Manage Your Projects</h1>
+						<br>
+						<p><a href="myProjects.php" class="btn-lg btn-primary" role="button">My Projects</a></p>
 					  </div>
 					</div>
 				  </div>
