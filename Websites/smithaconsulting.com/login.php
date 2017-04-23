@@ -109,7 +109,7 @@ else
 				<h3>Welcome <?php echo $_SESSION['user_id']; ?>, You have successfully logged in!</h3>
 				<hr />				
 				<div class="row">
-				<div class="col-lg-2 col-md-2">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 				
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
 				<a href="uploadImage.html">Upload Profile Image</a>
@@ -118,7 +118,7 @@ else
 					<input type="submit" name="logout" value="Logout" class="logout-button">
 				</form>
 				</div>
-				  <div class="col-lg-5">
+				  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
 					<div class="thumbnail">
 					  <img src="img/bg2.png" alt="Dashboard">
 					  <div class="caption text-center">
@@ -128,7 +128,7 @@ else
 					  </div>
 					</div>
 				  </div>
-				  <div class="col-lg-5">
+				  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
 					<div class="thumbnail">
 					  <img src="img/bg.png" alt="Dashboard">
 					  <div class="caption text-center">

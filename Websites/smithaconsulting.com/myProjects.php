@@ -76,12 +76,12 @@
         <!-- /.row -->
 		<div class="col-md-12">
 				<div class="row">
-				<div class="col-lg-2 col-md-2">
+				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
 				<div class="profile-img">
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
 				</div>
 				</div>
-				  <div class="col-lg-5">
+				  <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
 					<?php
 						session_start();
 						include 'php/mysql_info.php';
@@ -113,11 +113,10 @@
 						mysql_close($link);
 						?>
 				  </div>
-				  <div class="col-lg-5">
+				  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 					<p>Delete a project</p>
 		<form id="DeleteProjectForm" class="form-group" method="post" action="php/DeleteProject.php">
 				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name To Delete">
-				<br>
 				<br>
 				<input type="submit" name="DeleteProject">
 		</form>
