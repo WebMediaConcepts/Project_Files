@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,13 +70,20 @@
         <!-- Title -->
             <h1 class="text-center textResizer">Create A Task</h1>
 			<a href="login.php" class="btn btn-default">My Account</a>
-			<a href="login.php" class="btn btn-danger">My Projects</a>
+			<a href="myProjects.php" class="btn btn-danger">My Projects</a>
             <hr />
         <!-- /.row -->
 		
 	    <div class="col-lg-12">
-            <p class="lead">What's going on?</p>
-		<form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
+			<div class="row">
+			<div class="col-lg-2 col-md-2">
+				<div class="profile-img">
+				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
+				</div>
+			</div>
+		<div class="col-md-5">
+			<p class="lead">What's going on?</p>
+			<form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
 				<label for="ProjectName">Project Name</label>
 				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name">
 				<br />
@@ -87,8 +95,23 @@
 				<br />
 				<br />
 				<input type="submit" name="submitProject">
-		</form>
-        </div>
+			</form>
+		</div>
+            
+        <div class="col-md-5">
+			<p>Delete a project</p>
+			<form id="DeleteProjectForm" class="form-group" method="post" action="php/DeleteProject.php">
+				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name To Delete">
+				<br>
+				<br>
+				<input type="submit" name="DeleteProject">
+			</form>
+		</div>
+		
+		</div>
+		
+		</div>
+
         
         
      <hr>

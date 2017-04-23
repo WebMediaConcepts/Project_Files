@@ -1,13 +1,13 @@
 <?php
 session_start();
-	$projectName = "";
+	$imgURL = "";
 
 // validation steps here	
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{	// Store user input in vars
-		$projectName = $_POST['ProjectName'];
+		$imgURL = $_POST['imgURL'];
 	}
-	if($projectName != "" )
+	if($imgURL != "")
 	{
 	/************************END ERROR REPORTING*****************************/
 			include 'mysql_info.php';
@@ -18,12 +18,13 @@ session_start();
 			mysql_select_db($my_db) or die('Could not select database');
 			/******************CONNNECTION SUCCESSFUL*****************************/
 
+			$User = $_SESSION['user_id'];
 
 			// Performing SQL query
-			$query = "DELETE FROM  Projects WHERE Username = '".$_SESSION['user_id']."' AND ProjectName = '".$projectName."'";
+			$query = "UPDATE Users SET profileImage = '".$imgURL."' Where Username = '".$User."'"; 
 			$result = mysql_query($query) or die ('Query Failed:'. mysql_error());
 			/******************END QUERY***************************************/
-			header("location:http://ww2.cs.fsu.edu/~smitha/Projects/myProjects.php");
+			header("location:http://ww2.cs.fsu.edu/~smitha/Projects/login.php");
 
 			// Free resultset
 			mysql_free_result($result);
@@ -31,6 +32,7 @@ session_start();
 			// Closing connection
 			mysql_close($link);
 	}
-	header("location:http://ww2.cs.fsu.edu/~smitha/Projects/myProjects.php");   
+	     
 			
 ?>
+

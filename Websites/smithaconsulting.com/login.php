@@ -60,6 +60,8 @@ if(!empty($_POST["login"]))
 	if(is_array($row)) 
 	{
 		$_SESSION["user_id"] = $row['Username'];
+		$_SESSION["PROFILE_IMG"] = $row['profileImage'];
+		$profileIMG = $_SESSION["PROFILE_IMG"];
 		$_POST["logout"]='';
 
 	}
@@ -105,9 +107,19 @@ else
 	<div class="container">
 		<div class="col-md-12">
 				<h3>Welcome <?php echo $_SESSION['user_id']; ?>, You have successfully logged in!</h3>
-				<hr />
+				<hr />				
 				<div class="row">
-				  <div class="col-lg-6">
+				<div class="col-lg-2 col-md-2">
+				<div class="profile-img">
+				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
+				</div>
+				<a href="uploadImage.html">Upload Profile Image</a>
+					
+					<form action="" method="post" id="frmLogout">
+					<input type="submit" name="logout" value="Logout" class="logout-button">
+				</form>
+				</div>
+				  <div class="col-lg-5">
 					<div class="thumbnail">
 					  <img src="img/bg2.png" alt="Dashboard">
 					  <div class="caption text-center">
@@ -117,7 +129,7 @@ else
 					  </div>
 					</div>
 				  </div>
-				  <div class="col-lg-6">
+				  <div class="col-lg-5">
 					<div class="thumbnail">
 					  <img src="img/bg.png" alt="Dashboard">
 					  <div class="caption text-center">
@@ -128,9 +140,7 @@ else
 					</div>
 				  </div>
 				</div>
-		<form action="" method="post" id="frmLogout">
-			<input type="submit" name="logout" value="Logout" class="logout-button">
-		</form>
+		
 		</div>
 	</div>
 </body>
