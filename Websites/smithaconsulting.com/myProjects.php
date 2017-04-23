@@ -68,11 +68,15 @@
     <div class="container">
 	
         <!-- Title -->
-            <h1 class="text-center textResizer">Here Are Your Projects</h1>
+            <h1 class="text-center textResizer">Manage Projects</h1>
 			
-            <a href="login.php" class="btn btn-default">My Account</a>
-			<a href="CreateTask.php" class="btn btn-danger">Create New Task</a>
-			<hr />
+            <ul class="nav nav-tabs">
+				  <li role="presentation"><a href="login.php">Home</a></li>
+				  <li role="presentation"><a href="ViewProfile.php">View Profile</a></li>
+				  <li role="presentation"><a href="CreateTask.php">Create Task</a></li>
+				  <li role="presentation" class="active"><a href="myProjects.php">Projects</a></li>
+				</ul>
+				<br>
         <!-- /.row -->
 		<div class="col-md-12">
 				<div class="row">

@@ -107,7 +107,13 @@ else
 	<div class="container">
 		<div class="col-md-12">
 				<h3>Welcome <?php echo $_SESSION['user_id']; ?>, You have successfully logged in!</h3>
-				<hr />				
+				<ul class="nav nav-tabs">
+				  <li role="presentation" class="active"><a href="login.php">Home</a></li>
+				  <li role="presentation"><a href="ViewProfile.php">View Profile</a></li>
+				  <li role="presentation"><a href="CreateTask.php">Create Task</a></li>
+				  <li role="presentation"><a href="myProjects.php">Projects</a></li>
+				</ul>
+				<br>
 				<div class="row">
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 				

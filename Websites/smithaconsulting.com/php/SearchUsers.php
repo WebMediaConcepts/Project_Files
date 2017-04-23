@@ -1,13 +1,13 @@
 <?php
 session_start();
-	$imgURL = "";
+	$SearchUser = "";
 
 // validation steps here	
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{	// Store user input in vars
-		$imgURL = $_POST['imgURL'];
+		$SearchUser = $_POST['SearchUser'];
 	}
-	if($imgURL != "")
+	if($projectName != "" || $description !== "")
 	{
 	/************************END ERROR REPORTING*****************************/
 			include 'mysql_info.php';
@@ -17,17 +17,14 @@ session_start();
 			//echo 'Connected successfully';
 			mysql_select_db($my_db) or die('Could not select database');
 			/******************CONNNECTION SUCCESSFUL*****************************/
-
-			$User = $_SESSION['user_id'];
+			
 
 			// Performing SQL query
-			$query = "UPDATE Users SET profileImage = '".$imgURL."' Where Username = '".$User."'"; 
+			$query = 'SELECT FirstName, LastName, Email, Username FROM Users WHERE Username="'.$SearchUser.'"'; 
 			$result = mysql_query($query) or die ('Query Failed:'. mysql_error());
-			$_SESSION["user_id"] = '';
-			session_destroy();
-			$_SESSION["user_id"] = $User;
+			$_SESSION["SELECTED_USER"] = $SearchUser;
 			/******************END QUERY***************************************/
-			header("location:http://ww2.cs.fsu.edu/~smitha/Projects/login.php");
+			header("location:http://ww2.cs.fsu.edu/~smitha/Projects/ViewProfile.php");
 
 			// Free resultset
 			mysql_free_result($result);

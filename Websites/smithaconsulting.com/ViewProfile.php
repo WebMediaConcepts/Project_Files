@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,52 +68,95 @@
     <div class="container">
 	
         <!-- Title -->
-            <h1 class="text-center textResizer">Create A Task</h1>
-			<ul class="nav nav-tabs">
+            <h1 class="text-center textResizer">Search Users</h1>
+			
+            <ul class="nav nav-tabs tabsResizer">
 				  <li role="presentation"><a href="login.php">Home</a></li>
-				  <li role="presentation"><a href="ViewProfile.php">View Profile</a></li>
-				  <li role="presentation" class="active"><a href="CreateTask.php">Create Task</a></li>
+				  <li role="presentation" class="active"><a href="ViewProfile.php">View Profile</a></li>
+				  <li role="presentation"><a href="CreateTask.php">Create Task</a></li>
 				  <li role="presentation"><a href="myProjects.php">Projects</a></li>
 				</ul>
 				<br>
         <!-- /.row -->
-		
-	    <div class="col-lg-12">
-			<div class="row">
-			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+		<div class="col-md-12">
+				<div class="row">
+				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
 				<div class="profile-img">
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
 				</div>
-			</div>
-		<div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
-			<p class="lead">What's going on?</p>
-			<form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
-				<label for="ProjectName">Project Name</label>
-				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name">
-				<br />
-				<label for="Category">Category</label>
-				<input name="Category" type="text" class="form-control" placeholder="Service Request or WordPress Help">
-				<br />
-				<label for="Description">Description</label>
-				<textarea name="Description" class="form-control" rows="3" placeholder="Describe the issue"></textarea>
-				<br />
-				<input type="submit" name="submitProject">
-			</form>
-		</div>
-            
-        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-			<p>Delete a project</p>
-			<form id="DeleteProjectForm" class="form-group" method="post" action="php/DeleteProject.php">
-				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name To Delete">
+				</div>
+				  <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+				  <p>Search by Username</p>
+		<form id="SearchUserForm" class="form-group" method="post" action="php/SearchUsers.php">
+		<div class="error-message"><?php if(isset($errmessage)) { echo $message; } ?></div>
+				<input name="SearchUser" type="text" class="form-control" placeholder="Search Users">
 				<br>
 				<input type="submit" name="DeleteProject">
-			</form>
-		</div>
-		
-		</div>
-		
-		</div>
+		</form>
+					<?php
+						session_start();
+						include 'php/mysql_info.php';
+						// Connecting, selecting database
+						$link = mysql_connect($hostname, $username, $password)
+							or die('Could not connect: ' . mysql_error());
+						mysql_select_db($my_db) or die('Could not select database');
+						$SELECTED_USER = $_SESSION["SELECTED_USER"];		// User input Search
+						// Performing SQL query
+						$query = "SELECT * FROM Users WHERE Username = '".$SELECTED_USER."'";
+						$result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
+						$SELECTED_USER_IMG = mysql_query("SELECT profileImage FROM Users WHERE Username = '".$SELECTED_USER."'") or die('Query failed: ' . mysql_error());
+						$row  = mysql_fetch_array($SELECTED_USER_IMG);
+						if(is_array($row)) 
+						{
+							$SELECTED_USER_IMG = $row['profileImage'];
+							// Printing results in HTML
+						echo "<img src='".$SELECTED_USER_IMG."' class='img-responsive img-circle' />";
+						echo "<h3>";
+						while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+							foreach ($line as $col_value) {
+								echo "\t\t<i>$col_value</i><br><br>";
+							}
+	
+							echo "<br>";
+	
+						}
+						}
+						else 
+						{
+							$errmessage = "Invalid Username!";
+						}
+						
+						
+				  echo '</div>';
+				  echo '<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">';
+					
+						// Performing SQL query
+						$query2 = "SELECT * FROM Projects WHERE Username = '".$SELECTED_USER."'";
+						$result2 = mysql_query($query2) or die('Query failed: ' . mysql_error());
+
+								echo "<h3>";
+						while ($line = mysql_fetch_array($result2, MYSQL_ASSOC)) {
+							echo 'USERNAME: ';
+							foreach ($line as $col_value) {
+								echo "\t\t<i>$col_value</i><br><br>";
+							}
+	
+							echo "<br>";
+	
+						}
+						
+
+
+						// Free resultset
+						mysql_free_result($result2);
+
+						// Closing connection
+						mysql_close($link);
+						?>
+				</div>
+		
+		</div>
         
         
      <hr>
