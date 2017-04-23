@@ -110,9 +110,8 @@ else
 				<hr />				
 				<div class="row">
 				<div class="col-lg-2 col-md-2">
-				<div class="profile-img">
+				
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
-				</div>
 				<a href="uploadImage.html">Upload Profile Image</a>
 					
 					<form action="" method="post" id="frmLogout">
