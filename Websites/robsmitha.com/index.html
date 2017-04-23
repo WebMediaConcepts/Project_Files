@@ -1,26 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Rob Smitha - CS Page</title>
+    <title>Rob Smitha - CS page</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Theme CSS -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet">
-	
-	<!-- Custom CSS -->
+    <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
+	<!-- Font Awesome Icons -->
+	<script src="https://use.fontawesome.com/d4f311c4ca.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,204 +28,153 @@
 </head>
 
 <body>
-   <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a id='WelcomeMessage' onclick="GenerateMsg()" class="navbar-brand">Click to talk</a>
-		  <script>
-		  
-		  function GenerateMsg(){
-		  num = Math.floor((Math.random() * 4) + 1)
-		  switch(num){  
-			case 1: WelcomeMsg = "Hello world!";
-			break;
-			case 2: WelcomeMsg = "How's it going?";
-			break;
-			case 3: WelcomeMsg = "You need a website?";
-			break;
-			case 4: WelcomeMsg = "I build websites";
-			break;
-		  }
-		  document.getElementById('WelcomeMessage').innerHTML = WelcomeMsg;
-		  }
-		  </script>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MyStuff<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-			  <li class="dropdown-header">CGS3066</li>
-                <li><a href="p1/index.html">Resume</a></li>
-                <li><a href="p2/index.html">Form Validation</a></li>
-                <li><a href="p2/mms/index.html">Mini-Mimesweep</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Other</li>
-                <li><a href="Past_Projects/Budget_Tool/Budget_Tool.html">Budget Tool</a></li>
-                <li><a href="Past_Projects/Tax_Calculator/Tax_Calculator.html">Tax Calculator</a></li>
-				<li><a href="Past_Projects/Photo_Gallery/photos.htm">Photo Gallery</a></li>
-				<li><a href="Past_Projects/Movie_Search/Movie_Search.html">Movie Search</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+	<!-- Keep everything between the page wrapper...if you want to live -->
+    <div id="wrapper">
 
-    <!-- Page Content -->
-    <div class="container">
-        <!-- Page Header -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="page-header">Robert Smitha<br>
-                    <small>Computer Science, FSU</small>
-					<ul class="list-inline">
-  				<li>
-  					<a href="https://www.linkedin.com/in/rob-smitha-7ab39212a"  target="_blank">
-  					<i class="fa fa-linkedin" aria-hidden="true"></i>
-  					</a>
-  				</li>
-  				<li>
-  					<a href="https://github.com/RobertSmitha"  target="_blank">
-  					<i class="fa fa-github-alt" aria-hidden="true"></i>
-  					</a>
-  				</li>
-  				<li>
-  					<a href="https://www.facebook.com/rob.smitha"  target="_blank">
-  					<i class="fa fa-facebook" aria-hidden="true"></i>
-  					</a>
-  				</li>
-  				<li>
-  					<a href="https://twitter.com/WebMediaConcept" target="_blank" >
-  					<i class="fa fa-twitter" aria-hidden="true"></i>
-  					</a>
-  				</li>
-  				<li>
-  					<a href="https://www.instagram.com/WebMediaConcepts/"  target="_blank">
-  					<i class="fa fa-instagram" aria-hidden="true"></i>
-  					</a>
-  				</li>
-  				<li>
-  					<a href="https://plus.google.com/u/0/104625845534875230413" target="_blank" >
-  					<i class="fa fa-google-plus" aria-hidden="true"></i>
-  					</a>
-  				</li>
-				<li>
-  					<a href="mailto:rws15@my.fsu.edu" >
-  					<i class="fa fa-envelope-o" aria-hidden="true"></i>
-  					</a>
-  				</li>
-			</ul>
-                </h1>
-            </div>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Rob Smitha
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="Projects/index.html">Projects</a>
+                </li>
+                <li>
+                    <a href="docs/resume.pdf" target="_blank">Resume</a>
+                </li>
+                <li>
+                    <a href="mailto:rws15@my.fsu.edu">Contact</a>
+                </li>
+            </ul>
         </div>
-        <!-- /.row -->
-		<div class="container">
-		<p class="lead">I am a senior computer science student at Florida State University and the owner of a start up business called <a class ="green" href="http://www.webmediaconcepts.com/">Web Media Concepts.</a> 
-        I enjoy working with bootstrap and WordPress. Other interests of mine include programming, web design, online marketing, fitness, and personal development.</p>
-		<br>
-		<br>
-		</div>
-		<h1>CGS3066 Projects</h1>
-		<hr>
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="p1/index.html">
-                    <img class="img-responsive" src="img/p1.png" alt="Rob Smitha">
-                </a>
-                <h3>
-                    <a href="p1/index.html">Resume</a>
-                </h3>
-                <p>This assignment set up a webpage for Rob Smitha's Resume</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="p2/index.html">
-                    <img class="img-responsive" src="img/p2.png" alt="">
-                </a>
-                <h3>
-                    <a href="p2/index.html">Form Validation</a>
-                </h3>
-                <p>This assignment is on JavaScript, its uses in client side validation and building small apps. The assignment is in 2 parts and will also make use of HTML forms</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="WebDev_Project/index.html">
-                    <img class="img-responsive" src="img/bg.png" alt="">
-                </a>
-                <h3>
-                    <a href="WebDev_Project/index.html">WebDev Project</a>
-                </h3>
-                <p>This is the status report so far</p>
-            </div>
-        </div>
-        <!-- /.row -->
-		<h1>Past Projects</h1>
-		<hr>
-		<!-- Past Projects Row -->
-        <div class="row">
-            <div class="col-md-3 portfolio-item">
-                <a href="Past_Projects/Budget_Tool/Budget_Tool.html">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="Rob Smitha">
-                </a>
-                <h3>
-                    <a href="Past_Projects/Budget_Tool/Budget_Tool.html">Budget Tool</a>
-                </h3>
-                <p>Budget Tool</p>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Past_Projects/Tax_Calculator/Tax_Calculator.html">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="Past_Projects/Tax_Calculator/Tax_Calculator.html">Tax Calculator</a>
-                </h3>
-                <p>Tax Calculator</p>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Past_Projects/Photo_Gallery/photos.htm">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="Past_Projects/Photo_Gallery/photos.htm">Photo Gallery</a>
-                </h3>
-                <p>Photo Gallery</p>
-            </div>
-			<div class="col-md-3 portfolio-item">
-                <a href="Past_Projects/Movie_Search/Movie_Search.html">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="Past_Projects/Photo_Gallery/photos.htm">Movie Search</a>
-                </h3>
-                <p>Movie Search</p>
-            </div>
-        </div>
-        <!-- /.row -->
+        <!-- /#sidebar-wrapper -->
 
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="menu-btn">
+					<a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Toggle Menu</a>
+				</div>
+                <!--<div class="row">-->
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Rob Smitha 2017 &middot; <a href="mailto:rws15@my.fsu.edu">rws15@my.fsu.edu</a></p>
+                    <h1>Robert W. Smitha</h1>
+                    <small>Computer Science, FSU</small>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://www.linkedin.com/in/robsmitha" target="_blank">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/WebMediaConcepts/" target="_blank">
+                                <i class="fa fa-github-alt" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/rob.smitha" target="_blank">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/WebMediaConcept" target="_blank">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/WebMediaConcepts/" target="_blank">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:rws15@my.fsu.edu">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+                        <div class="row">
+                            <div class="col-lg-12">                            
+                                <p class="lead">
+                                    I am a senior computer science student at Florida State University and the owner of a start up business called <a class="green" href="http://www.webmediaconcepts.com/">Web Media Concepts.</a>
+                                    I enjoy working with bootstrap and WordPress. Other interests of mine include programming, web design, online marketing, fitness, and personal development.
+                                </p>
+                                <br />
+                                <br />
+                                <h2>Website Portfolio</h2>
+                                <hr style="width: 50%;" />
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="hidden-sm hidden-xs">
+                                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal4"><img class="image img-responsive img-center" src="img/clarity1st.png" alt=""></button>
+                                </div>
+                                <div class="hidden-md hidden-lg">
+                                    <a href="http://www.victoriazepp.com/"><img class="image img-responsive img-center" src="img/clarity1st.png" alt=""></a>
+                                </div>
+                            </div>  
+                            <div class="col-sm-4">
+                                <div class="hidden-sm hidden-xs">
+                                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal3"><img class="image img-responsive img-center" src="img/pfeifferlaw.png" alt=""></button>
+                                </div>
+                                <div class="hidden-md hidden-lg">
+                                    <a href="http://pfeifferlawgroup.com/"><img class="image img-responsive img-center" src="img/pfeifferlaw.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="hidden-sm hidden-xs">
+                                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal6"><img class="image img-responsive img-center" src="img/cory2v.png" alt=""></button>
+                                </div>
+                                <div class="hidden-md hidden-lg">
+                                    <a href="http://cory2v.com/"><img class="image img-responsive img-center" src="img/cory2v.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row --> 
+                        <hr style="width: 50%;" />
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="hidden-sm hidden-xs">
+                                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal1"><img class="image img-responsive img-center" src="img/massini.png" alt=""></button>
+                                </div>
+                                <div class="hidden-md hidden-lg">
+                                    <a href="http://www.massinilawnservices.com/"><img class="image img-responsive img-center" src="img/massini.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="hidden-sm hidden-xs">
+                                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal5"><img class="image img-responsive img-center" src="img/vrsolutions.png" alt=""></button>
+                                </div>
+                                <div class="hidden-md hidden-lg">
+                                    <a href="http://vacationrealtysolutions.com/"><img class="image img-responsive img-center" src="img/vrsolutions.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="hidden-sm hidden-xs">
+                                    <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#Modal2"><img class="image img-responsive img-center" src="img/tallyvisuals.png" alt=""></button>
+                                </div>
+                                <div class="hidden-md hidden-lg">
+                                    <a href="http://tallyvisuals.com/"><img class="image img-responsive img-center" src="img/tallyvisuals.png" alt=""></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.row -->  
+                    
+                <!--</div>-->
             </div>
-            <!-- /.row -->
-        </footer>
+        </div>
+        <!-- /#page-content-wrapper -->
 
     </div>
-    <!-- /.container -->
+    <!-- /#wrapper -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -236,6 +182,145 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    <!-- Massini Modal-->
+    <div id="Modal1" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Massini Lawn Services</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="http://www.massinilawnservices.com/"></iframe>
+                    <br />
+                    <a href="http://www.massinilawnservices.com/" class="btn btn-default">Visit Site</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- TallyVisuals Modal -->
+    <div id="Modal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Tally Visuals</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="http://tallyvisuals.com/"></iframe>
+                    <br />
+                    <a href="http://tallyvisuals.com/" class="btn btn-default">Visit Site</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Pfeiffer Law Modal -->
+    <div id="Modal3" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Pfeiffer Law Group</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="http://pfeifferlawgroup.com/"></iframe>
+                    <br />
+                    <a href="http://pfeifferlawgroup.com/" class="btn btn-default">Visit Site</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Clarity1st Modal -->
+    <div id="Modal4" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Clarity1st Consulting</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="http://victoriazepp.com/"></iframe>
+                    <br />
+                    <a href="http://victoriazepp.com/" class="btn btn-default">Visit Site</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Cory2v Modal -->
+    <div id="Modal5" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Van Valin Magic</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="http://cory2v.com/"></iframe>
+                    <br />
+                    <a href="http://cory2v.com/" class="btn btn-default">Visit Site</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- VRsolutions Modal -->
+    <div id="Modal6" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Van Valin Magic</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="http://www.vacationrealtysolutions.com/"></iframe>
+                    <br />
+                    <a href="http://www.vacationrealtysolutions.com/" class="btn btn-default">Visit Site</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
