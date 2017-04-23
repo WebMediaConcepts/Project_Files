@@ -72,9 +72,9 @@
 			
             <ul class="nav nav-tabs">
 				  <li role="presentation"><a href="login.php">Home</a></li>
-				  <li role="presentation"><a href="ViewProfile.php">View Profile</a></li>
-				  <li role="presentation"><a href="CreateTask.php">Create Task</a></li>
+				  <li role="presentation"><a href="ViewProfile.php">Profile</a></li>
 				  <li role="presentation" class="active"><a href="myProjects.php">Projects</a></li>
+				  <li role="presentation"><a href="CreateTask.php">Create Task</a></li>
 				</ul>
 				<br>
         <!-- /.row -->
