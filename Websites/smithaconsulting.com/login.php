@@ -109,9 +109,10 @@ else
 				<h3>Welcome <?php echo $_SESSION['user_id']; ?>, You have successfully logged in!</h3>
 				<ul class="nav nav-tabs">
 					<li role="presentation" class="active"><a href="login.php">Home</a></li>
+					<li role="presentation"><a href="Activity.php">Activity</a></li>
 					<li role="presentation"><a href="ViewProfile.php">Profile</a></li>
 					<li role="presentation"><a href="myProjects.php">Projects</a></li>
-					<li role="presentation"><a href="CreateTask.php">Create Task</a></li>
+					<li role="presentation"><a href="CreateTask.php">Create</a></li>
 				</ul>
 				<br>
 				<div class="row">

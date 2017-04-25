@@ -68,13 +68,13 @@
     <div class="container">
 	
         <!-- Title -->
-            <h1 class="text-center textResizer">Manage Projects</h1>
+            <h1 class="text-center textResizer">Activity Feed</h1>
 			
             <ul class="nav nav-tabs">
 				  <li role="presentation"><a href="login.php">Home</a></li>
-				  <li role="presentation"><a href="Activity.php">Activity</a></li>
+				  <li role="presentation" class="active"><a href="Activity.php">Activity</a></li>
 				  <li role="presentation"><a href="ViewProfile.php">Profile</a></li>
-				  <li role="presentation" class="active"><a href="myProjects.php">Projects</a></li>
+				  <li role="presentation"><a href="myProjects.php">Projects</a></li>
 				  <li role="presentation"><a href="CreateTask.php">Create</a></li>
 				</ul>
 				<br>
@@ -82,34 +82,37 @@
 		<div class="col-md-12">
 				<div class="row">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-				<div class="profile-img">
+				<div class="profile-img text-center">
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
+				
+				<br>
+				<button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalPost">Post</button>
 				</div>
 				</div>
-				  <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+				  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				  <h2>Activity</h2>
+				  <hr>
+				  
+
 					<?php
-						session_start();
 						include 'php/mysql_info.php';
 						// Connecting, selecting database
 						$link = mysql_connect($hostname, $username, $password)
 							or die('Could not connect: ' . mysql_error());
 						mysql_select_db($my_db) or die('Could not select database');
-						$User = $_SESSION['user_id'];
 						// Performing SQL query
-						$query = "SELECT projectName, description FROM Projects WHERE Username = '".$User."'";
+						$query = "SELECT projectName, description FROM Projects";
 						$result = mysql_query($query) or die('Query failed: ' . mysql_error());
 						// Printing results in HTML
-						echo "<h3>";
+						echo '<table class="table table-striped">';
 						while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
 							echo "Project:    ";
 							foreach ($line as $col_value) {
 								echo "\t\t<i>$col_value</i><br><br>";
 							}
-	
-							echo "<br>";
-	
+							echo '<hr>';	
 						}
-
+						echo '</table>';
 
 						// Free resultset
 						mysql_free_result($result);
@@ -118,14 +121,6 @@
 						mysql_close($link);
 						?>
 				  </div>
-				  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-					<p>Delete a project</p>
-		<form id="DeleteProjectForm" class="form-group" method="post" action="php/DeleteProject.php">
-				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name To Delete">
-				<br>
-				<input type="submit" name="DeleteProject">
-		</form>
-				</div>
 		
 		</div>
         
@@ -148,10 +143,35 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="contact/validator.js"></script>
-    <script src="contact/contact.js"></script>
     <script src="js/validate.js"></script>
+<!-- Post Modal -->
+    <div id="ModalPost" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Post Something</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
+				<label for="ProjectName">Project Name</label>
+				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name">
+				<br />
+				<label for="Description">Description</label>
+				<textarea name="Description" class="form-control" rows="3" placeholder="Describe the issue"></textarea>
+				<br />
+				<input type="submit" name="submitProject">
+				</form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>

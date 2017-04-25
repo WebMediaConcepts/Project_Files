@@ -22,7 +22,7 @@ session_start();
 
 
 			// Performing SQL query
-			$query = 'INSERT INTO Projects VALUES ("'.$_SESSION['user_id'].'", "'.$projectName.'", "'.$category.'", "'.$description.'")'; 
+			$query = 'INSERT INTO Projects VALUES ("'.$_SESSION['user_id'].'", "'.$projectName.'", "'.$description.'")'; 
 			$result = mysql_query($query) or die ('Query Failed:'. mysql_error());
 			/******************END QUERY***************************************/
 			header("location:http://ww2.cs.fsu.edu/~smitha/Projects/myProjects.php");

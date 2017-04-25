@@ -72,9 +72,10 @@
 			
             <ul class="nav nav-tabs">
 				  <li role="presentation"><a href="login.php">Home</a></li>
+				  <li role="presentation"><a href="Activity.php">Activity</a></li>
 				  <li role="presentation" class="active"><a href="ViewProfile.php">Profile</a></li>
 				  <li role="presentation"><a href="myProjects.php">Projects</a></li>
-				  <li role="presentation"><a href="CreateTask.php">Create Task</a></li>
+				  <li role="presentation"><a href="CreateTask.php">Create</a></li>
 				</ul>
 				<br>
         <!-- /.row -->
@@ -130,14 +131,15 @@
 						
 				  echo '</div>';
 				  echo '<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">';
-					
+						
 						// Performing SQL query
-						$query2 = "SELECT * FROM Projects WHERE Username = '".$SELECTED_USER."'";
+						$query2 = "SELECT projectName, description FROM Projects WHERE Username = '".$SELECTED_USER."'";
 						$result2 = mysql_query($query2) or die('Query failed: ' . mysql_error());
-
+						echo "<h3>";
+						echo $SELECTED_USER;
+						echo "'s Projects</h3>";
 								echo "<h3>";
 						while ($line = mysql_fetch_array($result2, MYSQL_ASSOC)) {
-							echo 'USERNAME: ';
 							foreach ($line as $col_value) {
 								echo "\t\t<i>$col_value</i><br><br>";
 							}
@@ -177,8 +179,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="contact/validator.js"></script>
-    <script src="contact/contact.js"></script>
     <script src="js/validate.js"></script>
 
 </body>

@@ -70,7 +70,7 @@
 				<div class="menu-btn">
 					<a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Toggle Menu</a>
 				</div>
-                <!--<div class="row">-->
+                <div class="row">
                 <div class="col-lg-12">
                     <h1>Robert W. Smitha</h1>
                     <small>Computer Science, FSU</small>
@@ -108,19 +108,39 @@
                     </ul>
                 </div>
                         <div class="row">
-                            <div class="col-lg-12">                            
-                                <p class="lead">
-                                    I am a senior computer science student at Florida State University and the owner of a start up business called <a class="green" href="http://www.webmediaconcepts.com/">Web Media Concepts.</a>
-                                    I enjoy working with bootstrap and WordPress. Other interests of mine include programming, web design, online marketing, fitness, and personal development.
-                                </p>
-                                <br />
-                                <br />
-                                
+                            <div class="container">
+                                <div class="col-lg-12">
+                                <div>
 
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="home">
+                                            <div class="col-md-6 col-md-offset-3">
+                                                <br /><br />
+                                                <p>
+                                                    I am a senior computer science student at Florida State University and the owner of a start up business called <a class="green" href="http://www.webmediaconcepts.com/">Web Media Concepts.</a>
+                                                    I enjoy working with bootstrap and WordPress. Other interests of mine include programming, web design, online marketing, fitness, and personal development.
+                                                </p>    
+                                            </div>
+                                            
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="profile">...</div>
+                                        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                                        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                                    </div>
+                                </div>            
                         </div>
-                        <!-- /.row -->  
-                    
-                <!--</div>-->
+                    </div>  
+                </div>
+               <!-- /.row -->
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -141,138 +161,14 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
-    <!-- Massini Modal-->
-    <div id="Modal1" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Massini Lawn Services</h4>
-                </div>
-                <div class="modal-body">
-                    <iframe src="http://www.massinilawnservices.com/"></iframe>
-                    <br />
-                    <a href="http://www.massinilawnservices.com/" class="btn btn-default">Visit Site</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- TallyVisuals Modal -->
-    <div id="Modal2" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Tally Visuals</h4>
-                </div>
-                <div class="modal-body">
-                    <iframe src="http://tallyvisuals.com/"></iframe>
-                    <br />
-                    <a href="http://tallyvisuals.com/" class="btn btn-default">Visit Site</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- Pfeiffer Law Modal -->
-    <div id="Modal3" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pfeiffer Law Group</h4>
-                </div>
-                <div class="modal-body">
-                    <iframe src="http://pfeifferlawgroup.com/"></iframe>
-                    <br />
-                    <a href="http://pfeifferlawgroup.com/" class="btn btn-default">Visit Site</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- Clarity1st Modal -->
-    <div id="Modal4" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Clarity1st Consulting</h4>
-                </div>
-                <div class="modal-body">
-                    <iframe src="http://victoriazepp.com/"></iframe>
-                    <br />
-                    <a href="http://victoriazepp.com/" class="btn btn-default">Visit Site</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- Cory2v Modal -->
-    <div id="Modal5" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Van Valin Magic</h4>
-                </div>
-                <div class="modal-body">
-                    <iframe src="http://cory2v.com/"></iframe>
-                    <br />
-                    <a href="http://cory2v.com/" class="btn btn-default">Visit Site</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- VRsolutions Modal -->
-    <div id="Modal6" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Van Valin Magic</h4>
-                </div>
-                <div class="modal-body">
-                    <iframe src="http://www.vacationrealtysolutions.com/"></iframe>
-                    <br />
-                    <a href="http://www.vacationrealtysolutions.com/" class="btn btn-default">Visit Site</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <!--Tab toggle-->
+    <script>
+        $('#myTabs a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+   
 </body>
 
 </html>

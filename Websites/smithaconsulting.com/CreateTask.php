@@ -71,9 +71,10 @@
             <h1 class="text-center textResizer">Create A Task</h1>
 			<ul class="nav nav-tabs">
 				  <li role="presentation"><a href="login.php">Home</a></li>
+				  <li role="presentation"><a href="Activity.php">Activity</a></li>
 				  <li role="presentation"><a href="ViewProfile.php">Profile</a></li>
 				  <li role="presentation"><a href="myProjects.php">Projects</a></li>
-			      <li role="presentation" class="active"><a href="CreateTask.php">Create Task</a></li>
+			      <li role="presentation" class="active"><a href="CreateTask.php">Create</a></li>
 				</ul>
 				<br>
         <!-- /.row -->
@@ -90,9 +91,6 @@
 			<form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
 				<label for="ProjectName">Project Name</label>
 				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name">
-				<br />
-				<label for="Category">Category</label>
-				<input name="Category" type="text" class="form-control" placeholder="Service Request or WordPress Help">
 				<br />
 				<label for="Description">Description</label>
 				<textarea name="Description" class="form-control" rows="3" placeholder="Describe the issue"></textarea>
