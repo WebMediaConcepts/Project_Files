@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,23 +23,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Smitha Consulting</a>
+                <?php
+						echo    '<a class="navbar-brand">Welcome ';
+                        echo    $_SESSION['user_id'];
+                        echo    "</a>";                
+                ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">Team</a>
+                        <a href="about.php">Team</a>
                     </li>                   
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="login.php">My Account</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -106,7 +105,7 @@ else
 ?>
 	<div class="container">
 		<div class="col-md-12">
-				<h3>Welcome <?php echo $_SESSION['user_id']; ?>, You have successfully logged in!</h3>
+				<h1 class="text-center"><?php echo $_SESSION['user_id']; ?>'s Dashboard</h1>
 				<ul class="nav nav-tabs">
 					<li role="presentation" class="active"><a href="login.php">Home</a></li>
 					<li role="presentation"><a href="Activity.php">Activity</a></li>
@@ -121,7 +120,7 @@ else
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
 				<a href="uploadImage.html">Upload Profile Image</a>
 					
-					<form action="" method="post" id="frmLogout">
+				<form action="" method="post" id="frmLogout">
 					<input type="submit" name="logout" value="Logout" class="logout-button">
 				</form>
 				</div>

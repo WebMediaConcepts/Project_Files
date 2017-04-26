@@ -1,4 +1,4 @@
-﻿
+﻿<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,23 +40,40 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Smitha Consulting</a>
+                <?php
+                if($_SESSION['user_id']=='') {
+                    echo    '<a class="navbar-brand" href="index.php">Smitha Consulting</a>';
+                    }
+                else {
+                    echo '<li>';
+                    echo    '<a class="navbar-brand">Welcome ';
+                    echo    $_SESSION['user_id'];
+                    echo    "</a>";
+                    echo '</li>'; 
+                }
+                ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">Team</a>
-                    </li>                   
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="login.php">My Account</a>
-                    </li>
+                        <a href="about.php">Team</a>
+                    </li> 
+                    <?php
+                    if($_SESSION['user_id']=='') { 
+                    echo '<li>';
+                    echo    '<a href="login.php">Login</a>';
+                    echo '</li>';
+                    }
+                    else {
+                    echo '<li>';
+                    echo    '<a href="login.php">My Account</a>';
+                    echo '</li>';
+                    }
+                    ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -83,16 +100,27 @@
                 <h2>Our Mission</h2>
                 <p>Smitha Consulting is leading the digital industry in bridging the communication gap between clients and developers, and like all good leaders, our aim is to serve. Our mission is to connect the dots for anyone in need of guidance, assistance and professional web development. </p>
                 <p>From WordPress troubleshooting, to full scale projects, current and future clients can use this portal to directly communicate with the developers at Smitha Consulting. We are seeking to serve as a vehicle by which our busy clients can manage their web projects from the comfort of a laptop or mobile device.</p>
-                <p>
-                    <a class="btn btn-danger btn-lg" href="login.php">Log In &raquo;</a>
-                </p>
+                <?php
+                if($_SESSION['user_id']=='') {
+                echo    '<p>';
+                echo    '<a class="btn btn-danger btn-lg" href="login.php">Log In &raquo;</a>';
+                echo    '</p>';
+                }
+                else    
+                {
+                echo    '<p>';
+                echo    '<a class="btn btn-danger btn-lg" href="login.php">My Account</a>';
+                echo    '</p>';
+                }
+                ?>
             </div>
             <div class="col-sm-4">
-                <h2>Don't Have An Account?</h2>
-                <address>
-                    <strong>Register Now!</strong>
-                </address>
-                <button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>
+            <?php
+            if($_SESSION['user_id']=='') {
+            echo    '<h2>Need An Account?</h2>';
+            echo    '<button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#ModalRegister">Register</button>';
+            }
+            ?>
             </div>
         </div>
         <!-- /.row -->

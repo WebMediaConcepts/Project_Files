@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<?php session_start();?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,23 +40,42 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Smitha Consulting</a>
+                <?php
+                if($_SESSION['user_id']=='') {
+                echo    '<a class="navbar-brand" href="index.php">Smitha Consulting</a>';
+                }
+                else {
+                echo '<li>
+                    ';
+                    echo    '<a class="navbar-brand">
+                        Welcome ';
+                        echo    $_SESSION['user_id'];
+                        echo    "
+                    </a>";
+                    echo '
+                </li>';
+                }
+                ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">Team</a>
+                        <a href="about.php">Team</a>
                     </li>
+                    <?php
+                    if($_SESSION['user_id']=='') {
+                    echo '
                     <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="login.php">My Account</a>
-                    </li>
+                        ';
+                        echo    '<a href="login.php">Login</a>';
+                        echo '
+                    </li>';
+                    }
+                    ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -118,8 +138,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="contact/validator.js"></script>
-    <script src="contact/contact.js"></script>
     <script src="js/validate.js"></script>
 
 </body>

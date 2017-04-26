@@ -40,23 +40,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Smitha Consulting</a>
+                <?php
+                if($_SESSION['user_id']=='') {
+                    echo    '<a class="navbar-brand" href="index.php">Smitha Consulting</a>';
+                    }
+                else {
+                    echo '<li>';
+                    echo    '<a class="navbar-brand">Welcome ';
+                    echo    $_SESSION['user_id'];
+                    echo    "</a>";
+                    echo '</li>'; 
+                }
+                ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">Team</a>
-                    </li>
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="login.php">My Account</a>
-                    </li>
+                        <a href="about.php">Team</a>
+                    </li> 
+                    <?php
+                    if($_SESSION['user_id']=='') { 
+                    echo '<li>';
+                    echo    '<a href="login.php">Login</a>';
+                    echo '</li>';
+                    }
+                    ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,7 +94,7 @@
 		<div class="col-md-12">
 				<div class="row">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-				<div class="profile-img text-center">
+				<div class="text-center">
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
 				
 				<br>

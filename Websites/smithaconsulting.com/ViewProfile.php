@@ -30,7 +30,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -40,23 +40,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Smitha Consulting</a>
+                <?php
+                if($_SESSION['user_id']=='') {
+                    echo    '<a class="navbar-brand" href="index.php">Smitha Consulting</a>';
+                    }
+                else {
+                    echo '<li>';
+                    echo    '<a class="navbar-brand">Welcome ';
+                    echo    $_SESSION['user_id'];
+                    echo    "</a>";
+                    echo '</li>'; 
+                }
+                ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">Team</a>
-                    </li>
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="login.php">My Account</a>
-                    </li>
+                        <a href="about.php">Team</a>
+                    </li> 
+                    <?php
+                    if($_SESSION['user_id']=='') { 
+                    echo '<li>';
+                    echo    '<a href="login.php">Login</a>';
+                    echo '</li>';
+                    }
+                    ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,8 +94,10 @@
 		<div class="col-md-12">
 				<div class="row">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-				<div class="profile-img">
+				<div class="text-center">
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
+				<br>
+				<button class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#ModalPost">Post</button>
 				</div>
 				</div>
 				  <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
@@ -103,7 +117,7 @@
 						mysql_select_db($my_db) or die('Could not select database');
 						$SELECTED_USER = $_SESSION["SELECTED_USER"];		// User input Search
 						// Performing SQL query
-						$query = "SELECT * FROM Users WHERE Username = '".$SELECTED_USER."'";
+						$query = "SELECT FirstName, LastName, Email FROM Users WHERE Username = '".$SELECTED_USER."'";
 						$result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
 						$SELECTED_USER_IMG = mysql_query("SELECT profileImage FROM Users WHERE Username = '".$SELECTED_USER."'") or die('Query failed: ' . mysql_error());
@@ -137,8 +151,7 @@
 						$result2 = mysql_query($query2) or die('Query failed: ' . mysql_error());
 						echo "<h3>";
 						echo $SELECTED_USER;
-						echo "'s Projects</h3>";
-								echo "<h3>";
+						echo " Projects</h3>";
 						while ($line = mysql_fetch_array($result2, MYSQL_ASSOC)) {
 							foreach ($line as $col_value) {
 								echo "\t\t<i>$col_value</i><br><br>";
@@ -180,7 +193,34 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/validate.js"></script>
+<!-- Post Modal -->
+    <div id="ModalPost" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Post Something</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="ProjectForm" class="form-group" method="post" action="php/projects.php">
+				<label for="ProjectName">Project Name</label>
+				<input name="ProjectName" type="text" class="form-control" placeholder="Project Name">
+				<br />
+				<label for="Description">Description</label>
+				<textarea name="Description" class="form-control" rows="3" placeholder="Describe the issue"></textarea>
+				<br />
+				<input type="submit" name="submitProject">
+				</form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
