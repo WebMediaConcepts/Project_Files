@@ -216,6 +216,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/validate.js"></script>
 
 
 
@@ -230,7 +231,7 @@
                     <h4 class="modal-title">Register for an account</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="RegForm" class="form-group" method="post" action="php/register.php">
+                    <form id="RegForm" class="form-group" onsubmit="return validate();" method="post" action="php/register.php">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">

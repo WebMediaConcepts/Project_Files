@@ -24,7 +24,7 @@
 
 
 			// Performing SQL query
-			$query = 'INSERT INTO Users VALUES ("'.$firstname.'", "'.$lastname.'", "'.$email.'", "'.$un.'", "'.$pw.'")'; 
+			$query = 'INSERT INTO Users (FirstName, LastName, Email, Username, Password) VALUES ("'.$firstname.'", "'.$lastname.'", "'.$email.'", "'.$un.'", "'.$pw.'")'; 
 			$result = mysql_query($query) or die ('Query Failed:'. mysql_error());
 			/******************END QUERY***************************************/
 			header("location:http://ww2.cs.fsu.edu/~smitha/Projects/");

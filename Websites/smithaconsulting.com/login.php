@@ -118,7 +118,7 @@ else
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 				
 				<?php echo "<img src='".$_SESSION["PROFILE_IMG"]."' class='img-responsive img-circle' />" ?>
-				<a href="uploadImage.html">Upload Profile Image</a>
+				<a href="uploadImage.php">Upload Profile Image</a>
 					
 				<form action="" method="post" id="frmLogout">
 					<input type="submit" name="logout" value="Logout" class="logout-button">
