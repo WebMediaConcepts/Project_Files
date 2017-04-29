@@ -1,573 +1,311 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>webmediaconcepts.com - Rob Smitha</title>
-    <meta name="description" content="webmediaconcepts.com - Rob Smitha">
-    <meta name="keywords" content="webmediaconcepts.com - Rob Smitha">
-    
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <!-- =======================================================
-        webmediaconcepts.com - Rob Smitha
-    ======================================================= -->
-  </head>
-  <body>
-    <!--Navigation bar-->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-            <a class="navbar-brand" href="index.html">Web Media <span>Concepts</span></a>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#feature">Features</a></li>
-          <li><a href="#organisations">Organisations</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#" data-target="#login" data-toggle="modal">Sign in</a></li>
-          <li class="btn-trial"><a href="#footer">Free Trail</a></li>
-        </ul>
-        </div>
-      </div>
-    </nav>
-    <!--/ Navigation bar-->
-    <!--Modal box-->
-    <div class="modal fade" id="login" role="dialog">
-      <div class="modal-dialog modal-sm">
-      
-        <!-- Modal content no 1-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-center form-title">Login</h4>
-          </div>
-          <div class="modal-body padtrbl">
+    <title>Web Media Concepts</title>
 
-            <div class="login-box-body">
-              <p class="login-box-msg">Sign in to start your session</p>
-              <div class="form-group">
-                <form name="" id="loginForm">
-                 <div class="form-group has-feedback"> <!----- username -------------->
-                      <input class="form-control" placeholder="Username"  id="loginid" type="text" autocomplete="off" /> 
-            <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginid"></span><!---Alredy exists  ! -->
-                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                  </div>
-                  <div class="form-group has-feedback"><!----- password -------------->
-                      <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" />
-            <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span><!---Alredy exists  ! -->
-                      <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                  </div>
-                  <div class="row">
-                      <div class="col-xs-12">
-                          <div class="checkbox icheck">
-                              <label>
-                                <input type="checkbox" id="loginrem" > Remember Me
-                              </label>
-                          </div>
-                      </div>
-                      <div class="col-xs-12">
-                          <button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Sign In</button>
-                      </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-      </div>
-    </div>
-    <!--/ Modal box-->
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
 
-    <!--Banner-->
-    <div class="banner">
-      <div class="bg-color">
+    <!-- Font Awesome Icons -->
+    <script src="https://use.fontawesome.com/d4f311c4ca.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-          <div class="row">
-            <div class="banner-text text-center">
-              <div class="text-border">
-                <h2 class="text-dec">Web Media Concepts</h2>
-              </div>
-                <div class="intro-para text-center quote">
-                <p class="big-text">We Help You Get Found On Google</p>
-                <p class="small-text">Our market specific search engine optimization (SEO) will produce more online leads for your business. Let us build an online presence to attract your perfect customer.</p>
-                <a href="#feature" class="btn mouse-hover">About Our Company</a>
-              </div>
-              <a href="#feature" class="mouse-hover"><div class="mouse"></div></a>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Web Media Concepts</a>
             </div>
-          </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-item.html">Single Portfolio Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="blog-home-1.html">Blog Home 1</a>
+                            </li>
+                            <li>
+                                <a href="blog-home-2.html">Blog Home 2</a>
+                            </li>
+                            <li>
+                                <a href="blog-post.html">Blog Post</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="full-width.html">Full Width Page</a>
+                            </li>
+                            <li>
+                                <a href="sidebar.html">Sidebar Page</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="404.html">404</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html">Pricing Table</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-      </div>
-    </div>
-    <!--/ Banner-->
-    <!--Feature-->
-    <section id ="feature" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2>Who We Are</h2>
-            <p>Web Media Concepts is a contemporary web design company in Tallahassee, Florida. Our company keeps up with the latest web design trends to deliver modern and professional websites for companies of all sizes. We know getting your website designed or redesigned within the constraints of a large web design firm can be a huge hassle when you have a business to run. Web Media Concepts eliminates the stress of getting a new website by treating you like a human being, and not a project deadline.</p>
-            <hr class="bottom-line">
-          </div>
-          <div class="feature-info">
-              <div class="row">
-                  <div class="fea">
-                      <div class="col-md-4">
-                          <div class="heading pull-right">
-                              <h4>Web Design</h4>
-                          </div>
-                          <div class="fea-img pull-left">
-                              <i class="fa fa-css3"></i>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="fea">
-                      <div class="col-md-4">
-                          <div class="heading pull-right">
-                              <h4>Web Design</h4>
-                          </div>
-                          <div class="fea-img pull-left">
-                              <i class="fa fa-css3"></i>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="fea">
-                      <div class="col-md-4">
-                          <div class="heading pull-right">
-                              <h4>Data Tracking</h4>
-                          </div>
-                          <div class="fea-img pull-left">
-                              <i class="fa fa-drupal"></i>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="fea">
-                      <div class="col-md-4">
-                          <div class="heading pull-right">
-                              <h4>Brand Identity</h4>
-                          </div>
-                          <div class="fea-img pull-left">
-                              <i class="fa fa-trophy"></i>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="fea">
-                      <div class="col-md-4">
-                          <div class="heading pull-right">
-                              <h4>Marketing Consulting</h4>
-                          </div>
-                          <div class="fea-img pull-left">
-                              <i class="fa fa-trophy"></i>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="fea">
-                      <div class="col-md-4">
-                          <div class="heading pull-right">
-                              <h4>Online Strategies</h4>
-                          </div>
-                          <div class="fea-img pull-left">
-                              <i class="fa fa-trophy"></i>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('img/web-development.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Professional Web Development</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('img/seo-analytics.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>We Help You Get Found On Google</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('img/online-store.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>24/7 Ecommerce Support</h2>
+                </div>
+            </div>
         </div>
-        </div>
-      </div>
-    </section>
-    <!--/ feature-->
-    <!--Organisations-->
-    <section id ="organisations" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">         
-              <div class="orga-stru">
-                <h3>65%</h3>
-                <p>Say NO!!</p>
-                <i class="fa fa-male"></i>
-              </div>  
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">         
-              <div class="orga-stru">
-                <h3>20%</h3>
-                <p>Says Yes!!</p>
-                <i class="fa fa-male"></i>
-              </div>  
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">         
-              <div class="orga-stru">
-                <h3>15%</h3>
-                <p>Can't Say!!</p>
-                <i class="fa fa-male"></i>
-              </div>  
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="detail-info">
-              <hgroup>
-                <h3 class="det-txt"> Is inclusive quality education affordable?</h3>
-                <h4 class="sm-txt">(Revised and Updated for 2016)</h4>
-              </hgroup>
-              <p class="det-p">We know our clients are busy with day to day business affairs, that's why we set up your website behind the scenes and notify you at key milestones in its development. You just have to take a quick look at the website's progress and let us know if you love it or if things need to be adjusted.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Organisations-->
-    <!--Cta-->
-    <section id="cta-2">
-      <div class="container">
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
-              <h2 class="text-center">Subscribe Now</h2>
-              <p class="cta-2-txt">Sign up for our free weekly software design courses, we’ll send them right to your inbox.</p>
-             <div class="cta-2-form text-center">
-              <form action="#" method="post" id="workshop-newsletter-form">
-                    <input name="" placeholder="Enter Your Email Address" type="email">
-                    <input class="cta-2-form-submit-btn" value="Subscribe" type="submit">
-                </form>
-             </div>   
+                <h1 class="page-header">
+                    What We Do
+                </h1>
             </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Cta-->
-    <!--work-shop-->
-    <section id="work-shop" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2>Upcoming Workshop</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-            <hr class="bottom-line">
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="service-box text-center">
-              <div class="icon-box">
-                <i class="fa fa-html5 color-green"></i>
-              </div>
-              <div class="icon-text">
-                <h4 class="ser-text">Mentor HTML5 Workshop</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="service-box text-center">
-              <div class="icon-box">
-                <i class="fa fa-css3 color-green"></i>
-              </div>
-              <div class="icon-text">
-                <h4 class="ser-text">Mentor CSS3 Workshop</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="service-box text-center">
-              <div class="icon-box">
-                <i class="fa fa-joomla color-green"></i>
-              </div>
-              <div class="icon-text">
-                <h4 class="ser-text">Mentor Joomla Workshop</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ work-shop-->
-    <!--Faculity member-->
-    <section id="faculity-member" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2>Meet Our Owner</h2>
-            <p><strong>Robert Smitha</strong> is a senior computer science student at Florida State University. His proficiency in web development and professional web consulting knowledge has grown into a web design company called Web Media Concepts.</p>
-            <hr class="bottom-line">
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <div class="pm-staff-profile-container" >
-              <div class="pm-staff-profile-image-wrapper text-center">
-                <div class="pm-staff-profile-image">
-                  <img src="img/robsmitha-sq.jpg" alt="" class="img-thumbnail img-circle" />
-                </div>   
-              </div>                                
-              <div class="pm-staff-profile-details text-center">  
-                <p class="pm-staff-profile-name">Rob Smitha</p>
-                <p class="pm-staff-profile-title">President</p>
-              </div>     
-            </div>
-          </div>
-          <div class="col-md-8">
-              <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Smitha began studying computer science at Florida State University while pursing a minor in general business. Rob’s pursuit of his goals and the desire for their achievement is the driving force behind his wide range of developmental skills which include web design, programming, WordPress development, search engine optimization (SEO), user interface design, project management and much more. Of course, these trades need to be built with some programming language or markup code, so Rob works with a diverse array of latest programming options to deliver the best final project for his clients. His skill set of languages includes C++, HTML5, CSS3, JavaScript, JSON, jQuery and more.
-              </p>
-              <!--<p>
-                  While furthering his education at Florida State, Rob also worked as a valet manager at a high-end establishment called Governor’s Club. The private membership club became an excellent opportunity to showcase his development skills and engage in some freelance web design work. This became the foundation of his company Web Media Concepts and led to many rewarding business opportunities. Rob has worked with reputable law firms, consulting agencies and other businesses on their websites and online presence.
-              </p>-->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Faculity member-->
-    <!--Testimonial-->
-    <section id="testimonial" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2 class="white">See What Our Customer Are Saying?</h2>
-            <p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-            <hr class="bottom-line bg-white">
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="text-comment">
-              <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
-              <p class="text-name">Abraham Doe - Creative Dırector</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="text-comment">
-              <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
-              <p class="text-name">Abraham Doe - Creative Dırector</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Testimonial-->
-    <!--Courses-->
-    <section id ="courses" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2>Clients</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-            <hr class="bottom-line">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-sm-6 padleft-right">
-            <figure class="imghvr-fold-up">
-              <img src="img/1.png" class="img-responsive">
-              <figcaption>
-                  <h3>Clarity1st consulting</h3>
-                  <p>Tallahassee, FL.</p>
-              </figcaption>
-              <a href="http://victoriazepp.com/"></a>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 padleft-right">
-            <figure class="imghvr-fold-up">
-              <img src="img/2.png" class="img-responsive">
-              <figcaption>
-                  <h3>Pfeiffer Law Group</h3>
-                  <p>Tallahassee, FL.</p>
-              </figcaption>
-              <a href="http://pfeifferlawgroup.com/"></a>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 padleft-right">
-            <figure class="imghvr-fold-up">
-              <img src="img/3.png" class="img-responsive">
-              <figcaption>
-                  <h3>Van Valin Magic</h3>
-                  <p>Tampa, FL.</p>
-              </figcaption>
-              <a href="http://cory2v.com/"></a>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 padleft-right">
-            <figure class="imghvr-fold-up">
-              <img src="img/4.png" class="img-responsive">
-              <figcaption>
-                  <h3>Vacation Realty Solutions</h3>
-                  <p>Destin, FL.</p>
-              </figcaption>
-              <a href="http://www.vacationrealtysolutions.com/"></a>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 padleft-right">
-            <figure class="imghvr-fold-up">
-              <img src="img/5.png" class="img-responsive">
-              <figcaption>
-                  <h3>Massini Lawn Services</h3>
-                  <p>Central Florida</p>
-              </figcaption>
-              <a href="http://www.massinilawnservices.com/"></a>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 padleft-right">
-            <figure class="imghvr-fold-up">
-              <img src="img/6.png" class="img-responsive">
-              <figcaption>
-                  <h3>TallyVisuals</h3>
-                  <p>Tallahassee, FL.</p>
-              </figcaption>
-              <a href="http://tallyvisuals.com/"></a>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Courses-->
-    <!--Pricing-->
-    <section id ="pricing" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2>Our Websites</h2>
-            <p>Our variety of websites are built to suit organizations of all types and sizes!</p>
-            <hr class="bottom-line">
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="price-table">
-              <!-- Plan  -->
-              <div class="pricing-head">
-                <h3>WordPress</h3>
-                <span class="fa fa-usd curency"></span> <span class="amount">200</span> 
-              </div>
-          
-              <!-- Plean Detail -->
-              <div class="price-in mart-15">
-                <a href="#" class="btn btn-bg green btn-block">PURCHACE</a> 
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="price-table">
-              <!-- Plan  -->
-              <div class="pricing-head">
-                <h3>Bootstrap</h3>
-                <span class="fa fa-usd curency"></span> <span class="amount">800</span> 
-              </div>
-          
-              <!-- Plean Detail -->
-              <div class="price-in mart-15">
-                <a href="#" class="btn btn-bg yellow btn-block">PURCHACE</a> 
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="price-table">
-              <!-- Plan  -->
-              <div class="pricing-head">
-                <h3>Ecommerce</h3>
-                <span class="fa fa-usd curency"></span> <span class="amount">1200</span> 
-              </div>
-          
-              <!-- Plean Detail -->
-              <div class="price-in mart-15">
-                <a href="#" class="btn btn-bg red btn-block">PURCHACE</a> 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Pricing-->
-    <!--Contact-->
-    <section id ="contact" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-            <hr class="bottom-line">
-          </div>
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
-              <div class="col-md-6 col-sm-6 col-xs-12 left">
-                <div class="form-group">
-                    <input type="text" name="name" class="form-control form" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-laptop"></i>&nbsp;Web Development</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>A website serves as an online identitiy for a business. Our modern and professional web development standards ensure your website will scale flawlessly across all screen types and sizes.</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-line-chart"></i>&nbsp;Analytics &amp; SEO</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The best way to generate online leads for any business is through organized online marketing strategies. We implement effective SEO techniques that attract more online customers.</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                    <div class="validation"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-shopping-basket"></i>&nbsp;Ecommerce Mangement</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Let's face it, the business of buying and selling has largely been moved online. Let Us handle the day-to-day website maintenance so you can focus on your next big move.</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
                 </div>
-              </div>
-              
-              <div class="col-md-6 col-sm-6 col-xs-12 right">
-                <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validation"></div>
-                </div>
-              </div>
-              
-              <div class="col-xs-12">
-                <!-- Button -->
-                <button type="submit" id="submit" name="submit" class="form contact-form-button light-form-button oswald light">SEND EMAIL</button>
-              </div>
-          </form>
-          
+            </div>
         </div>
-      </div>
-    </section>
-    <!--/ Contact-->
-    <!--Footer-->
-    <footer id="footer" class="footer">
-      <div class="container text-center">
-    
-      <h3>Start Your Free Trial Now!</h3>
-    
-      <form class="mc-trial row">
-        <div class="form-group col-md-3 col-md-offset-2 col-sm-4">
-          <div class=" controls">
-            <input name="name" placeholder="Enter Your Name" class="form-control" type="text">
-          </div>
-        </div><!-- End email input -->
-        <div class="form-group col-md-3 col-sm-4">
-          <div class=" controls">
-            <input name="EMAIL" placeholder="Enter Your email" class="form-control" type="email">
-          </div>
-        </div><!-- End email input -->
-        <div class="col-md-2 col-sm-4">
-          <p>
-            <button name="submit" type="submit" class="btn btn-block btn-submit">
-            Submit <i class="fa fa-arrow-right"></i></button>
-          </p>
+        <!-- /.row -->
+
+        <!-- Portfolio Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Website Portfolio</h2>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="img/clarity1st.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="img/pfeifferlaw.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="img/massini.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="img/cory2v.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="img/vrsolutions.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="img/tallyvisuals.png" alt="">
+                </a>
+            </div>
         </div>
-      </form><!-- End newsletter-form -->
-      <ul class="social-links">
-        <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-google-plus fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-dribbble fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
-      </ul>
-        <b>Web Media Concepts, L.L.C. All rights reserved &copy; 2016-2017</b>
-      </div>
-    </footer>
-    <!--/ Footer-->
-    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Featured Project</h2>
+            </div>
+            <div class="col-md-6">
+                <a href="http://smithaconsulting.com">SmithaConsulting.com</a>
+                <ul>
+                    <li><strong>Project Management Web Application</strong>
+                    </li>
+                    <li>Bootstrap Frontend Framework</li>
+                    <li>PHP Backend Development</li>
+                    <li>SQL Database</li>
+                    <li>User Accounts For Clients</li>
+                    <li>Post Projects &amp; Chat With Developers 24/7</li>
+                </ul>
+                <p>Smitha Consulting is leading the digital industry in bridging the communication gap between clients and developers, and like all good leaders, our aim is to serve. Our mission is to connect the dots for anyone in need of guidance, assistance and professional web development.</p>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="img/smitha-consulting-1.png" alt="">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Call to Action Section -->
+        <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>We know our clients are busy with day to day business affairs, that's why we set up your website behind the scenes and notify you at key milestones in its development. You just have to take a quick look at the website's progress and let us know if you love it or if things need to be adjusted.</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg btn-default btn-block" href="#">Get Onboard Now!</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Web Media Concepts L.L.C. &copy; 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="contactform/contactform.js"></script>
-    
-  </body>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
 </html>
