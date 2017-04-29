@@ -9,9 +9,11 @@
 
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+<script src="js/bootstrap.min.js"></script>
 <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -24,9 +26,16 @@
                     <span class="icon-bar"></span>
                 </button>
                 <?php
-						echo    '<a class="navbar-brand">Welcome ';
-                        echo    $_SESSION['user_id'];
-                        echo    "</a>";                
+				if(!isset($_SESSION['user_id'])) {
+                echo    '<a class="navbar-brand" href="index.php">Smitha Consulting</a>';
+                }
+                else {
+					echo '<li>';
+                    echo    '<a class="navbar-brand">Welcome ';
+                    echo    $_SESSION['user_id'];
+                    echo    "</a>";
+                    echo	'</li>';
+                }
                 ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,8 +88,8 @@ if ($_SESSION['user_id']=='')
 {
 ?>
 <div class="container">
-		<div class="col-md-12">
-		<br />
+  <div class="col-md-12">
+    <br />
     <form action="" method="post" id="frmLogin">
         <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
         <div class="field-group">
@@ -95,7 +104,7 @@ if ($_SESSION['user_id']=='')
             <div><input type="submit" name="login" value="Login" class="form-submit-button"></div>
         </div>
     </form>
-		</div>
+  </div>
 </div>
 
 <?php
@@ -103,6 +112,59 @@ if ($_SESSION['user_id']=='')
 else
 {
 ?>
+
+<html>
+<head>
+    <title>Your Account</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <?php
+				if(!isset($_SESSION['user_id'])) {
+                echo    '<a class="navbar-brand" href="index.php">Smitha Consulting</a>';
+                }
+                else {
+					echo '<li>';
+                    echo    '<a class="navbar-brand">Welcome ';
+                    echo    $_SESSION['user_id'];
+                    echo    "</a>";
+                    echo	'</li>';
+                }
+                ?>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.php">Team</a>
+                    </li>                   
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 	<div class="container">
 		<div class="col-md-12">
 				<h1 class="text-center"><?php echo $_SESSION['user_id']; ?>'s Dashboard</h1>
