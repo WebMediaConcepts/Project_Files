@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,7 +38,14 @@
   ga('create', 'UA-84659575-3', 'auto');
   ga('send', 'pageview');
 
+
+    
 </script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -99,15 +106,20 @@
     </header>
     <section id="intro" class="container content-section text-center">
     			<div class="col-md-6">
-				     <a href="https://www.eventbrite.com/e/cory-van-valin-magic-redefined-downtown-tampa-tickets-33013649715?aff=efbeventtix" target="_blank">				
-					 <img src="img/event1.png" class="img-responsive" alt="Magic Man Van Valin">
+				     <a href="https://www.eventbrite.com/e/cory-van-valin-magic-redefined-channelside-9pm-tickets-35088295035" target="_blank" data-toggle="popover" title="CLICK FOR TICKETS" data-content="Get your tickets online by clicking this image">				
+                     CLICK FOR TICKETS
+                         <img src="img/event1.png" class="img-responsive" alt="Magic Man Van Valin">
+                         
 					 </a>
 				</div>
   				<div class="col-md-6">	
-				     <a href="https://www.eventbrite.com/e/cory-van-valin-magic-redefined-hospitality-show-tickets-33014692835?aff=efbeventtix" target="_blank">
-					 <img src="img/event2.png" class="img-responsive" alt="Magic Man Van Valin">
+				     <a href="http://nova535.com/event/improv-and-illusions-with-got-jokes-entertainment/" target="_blank" data-toggle="popover" title="CLICK FOR TICKETS" data-content="Get your tickets online by clicking this image">
+                     CLICK FOR TICKETS
+                         <img src="img/event2.png" class="img-responsive" alt="Magic Man Van Valin">
+                        
 					 </a>
 				</div>
+
 				
   	</section>
     <!-- About Section -->
